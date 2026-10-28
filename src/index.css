@@ -1,14 +1,31 @@
 @import "tailwindcss";
 
+/* 
+ * Professional Enterprise Font Stack:
+ * 1. Plus Jakarta Sans (ExtraBold 800, Bold 700, SemiBold 600) for authoritative corporate headlines & brand
+ * 2. Inter (Regular 400, Medium 500, SemiBold 600) for crisp, world-class executive body typography
+ * 3. JetBrains Mono (400, 500, 600) for international shipping codes, HS numbers, and terminal specifications
+ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
 @layer base {
   * {
     border-radius: 0px !important;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
-    background-color: #F5F1E3;
-    color: #2C2C2C;
-    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f2f2f2;
+    color: #111111;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -16,104 +33,170 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    line-height: 0.85;
-    letter-spacing: -0.05em;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 0.95;
     text-transform: uppercase;
   }
 }
 
-/* Editorial Typography Helpers */
-.font-montserrat {
-  font-family: 'Montserrat', sans-serif;
+/* Professional Typography Utility Classes */
+.font-display-corp,
+.font-clash {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
 }
 
-.font-open-sans {
-  font-family: 'Open Sans', sans-serif;
+.font-body-corp,
+.font-satoshi {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
-.utility-label {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 0.1em;
+.font-body-medium,
+.font-satoshi-bold {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 600;
+}
+
+.font-mono-swiss,
+.font-mono {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* 
+ * The Swiss Echo Effect (Executive Edition):
+ * Primary hero text layered with 4 background repetitions.
+ * Offsets: -0.04em, -0.08em, -0.12em, -0.16em respectively,
+ * with neutral corporate tones fading from #bfbfbf to #d9d9d9.
+ */
+.echo-container {
+  position: relative;
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  user-select: none;
+  padding-top: 0.18em;
+  padding-left: 0.18em;
+  margin-top: -0.18em;
+  margin-left: -0.18em;
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+  white-space: nowrap;
+}
+
+.echo-layer {
+  position: absolute;
+  top: 0.18em;
+  left: 0.18em;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.92;
+  white-space: nowrap;
   text-transform: uppercase;
 }
 
-/* Grayscale-to-color 500ms transition */
-.editorial-img {
-  filter: grayscale(100%);
-  transition: filter 500ms ease-in-out, transform 500ms ease-in-out;
+.echo-layer-1 {
+  transform: translate(-0.04em, -0.04em);
+  color: #bfbfbf;
+  z-index: 1;
 }
 
-.group:hover .editorial-img,
-.editorial-img:hover {
-  filter: grayscale(0%);
+.echo-layer-2 {
+  transform: translate(-0.08em, -0.08em);
+  color: #c7c7c7;
+  z-index: 2;
 }
 
-/* Solid Editorial Block Shadows (Zero soft blur, strict 90-degree corners) */
-.shadow-editorial-20 {
-  box-shadow: 20px 20px 0px #2C2C2C;
+.echo-layer-3 {
+  transform: translate(-0.12em, -0.12em);
+  color: #cfcfcf;
+  z-index: 3;
 }
 
-.shadow-editorial-16 {
-  box-shadow: 16px 16px 0px #2C2C2C;
+.echo-layer-4 {
+  transform: translate(-0.16em, -0.16em);
+  color: #d9d9d9;
+  z-index: 4;
 }
 
-.shadow-editorial-12 {
-  box-shadow: 12px 12px 0px #2C2C2C;
+.echo-foreground {
+  position: relative;
+  color: #111111;
+  z-index: 10;
+  white-space: nowrap;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.92;
+  text-transform: uppercase;
 }
 
-.shadow-editorial-8 {
-  box-shadow: 8px 8px 0px #2C2C2C;
+/* Swiss Micro-interactions & Image Reveals */
+.swiss-reveal-image {
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 700ms cubic-bezier(0.77, 0, 0.175, 1), transform 700ms cubic-bezier(0.77, 0, 0.175, 1);
+  filter: none;
 }
 
-.shadow-editorial-4 {
-  box-shadow: 4px 4px 0px #2C2C2C;
+.swiss-reveal-image:hover,
+.group:hover .swiss-reveal-image {
+  transform: scale(1.05);
 }
 
-.shadow-editorial-yellow {
-  box-shadow: 16px 16px 0px #FCD758;
+/* Sharp geometric interactive cards */
+.swiss-card {
+  background: #ffffff;
+  border: 1px solid #111111;
+  transition: transform 300ms cubic-bezier(0.77, 0, 0.175, 1), background-color 300ms ease;
 }
 
-.shadow-editorial-blue {
-  box-shadow: 16px 16px 0px #5DA4C9;
+.swiss-card:hover {
+  transform: translateY(-4px);
 }
 
-/* Linear Infinite Horizontal Ticker (40s linear scroll) */
-@keyframes marquee-scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+/* Geometric index indicator */
+.geo-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  border: 1px solid #111111;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.2;
 }
 
-.animate-marquee-linear {
+/* Geometric custom divider accents */
+.swiss-divider {
+  border-top: 1px solid #111111;
+}
+
+.swiss-divider-muted {
+  border-top: 1px solid #b6b5b5;
+}
+
+/* Infinite Marquee Ticker */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee-scroll 40s linear infinite;
-  will-change: transform;
+  animation: marquee 30s linear infinite;
 }
 
-.animate-marquee-linear:hover {
+.animate-marquee:hover {
   animation-play-state: paused;
-}
-
-/* Custom crisp solid scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-::-webkit-scrollbar-track {
-  background: #F5F1E3;
-  border-left: 2px solid #2C2C2C;
-}
-::-webkit-scrollbar-thumb {
-  background: #BC2C2C;
-  border: 2px solid #2C2C2C;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #2C2C2C;
 }

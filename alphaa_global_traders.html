@@ -4,20 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="view-transition" content="same-origin" />
-    <title>Alphaa Global Traders - Editorial Retro-Modernist Export Portal</title>
-    <meta name="description" content="Striking high-contrast editorial export platform blending 1970s retro aesthetics with modern brutalist layouts, bold typography, and global trade manifests." />
-    
-    <!-- Open Graph / Social -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Alphaa Global Traders" />
-    <meta property="og:description" content="Leading Indian export company connecting quality Indian products—agricultural commodities, spices, textiles, handicrafts, and engineering goods—to B2B buyers worldwide." />
-    <meta property="og:site_name" content="Alphaa Global Traders" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <title>Alphaa Global Traders - Swiss Minimalist Export House</title>
+    <meta name="description" content="Swiss Minimalist B2B export platform connecting Indian commodities, spices, textiles, and engineering components worldwide." />
 
-    <!-- Google Fonts: Montserrat (700, 800, 900) & Open Sans (400, 600, 700) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,800&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <!-- Professional Enterprise Fonts: Plus Jakarta Sans, Inter, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -25,660 +18,351 @@
     <style>
       * {
         border-radius: 0px !important;
+        box-sizing: border-box;
       }
       body {
-        background-color: #F5F1E3;
-        color: #2C2C2C;
-        font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        background-color: #f2f2f2;
+        color: #111111;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-weight: 400;
         line-height: 1.6;
         margin: 0;
         padding: 0;
         overflow-x: hidden;
       }
       h1, h2, h3, h4, h5, h6 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 900;
-        line-height: 0.85;
-        letter-spacing: -0.05em;
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.035em;
+        line-height: 0.95;
         text-transform: uppercase;
       }
-      .font-montserrat { font-family: 'Montserrat', sans-serif; }
-      .font-open-sans { font-family: 'Open Sans', sans-serif; }
-      .utility-label {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 10px;
-        font-weight: 900;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
+      .font-clash,
+      .font-display-corp {
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.035em;
+        line-height: 0.95;
       }
-      .editorial-img {
-        filter: grayscale(100%);
-        transition: filter 500ms ease-in-out, transform 500ms ease-in-out;
+      .font-satoshi,
+      .font-body-corp {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-weight: 400;
       }
-      .group:hover .editorial-img,
-      .editorial-img:hover {
-        filter: grayscale(0%);
+      .font-mono-swiss {
+        font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
       }
-      .shadow-editorial-20 { box-shadow: 20px 20px 0px #2C2C2C; }
-      .shadow-editorial-16 { box-shadow: 16px 16px 0px #2C2C2C; }
-      .shadow-editorial-12 { box-shadow: 12px 12px 0px #2C2C2C; }
-      .shadow-editorial-8 { box-shadow: 8px 8px 0px #2C2C2C; }
-      .shadow-editorial-4 { box-shadow: 4px 4px 0px #2C2C2C; }
 
-      @keyframes marquee-scroll {
+      /* The Swiss Echo Effect with containment padding */
+      .echo-container {
+        position: relative;
+        display: block;
+        width: fit-content;
+        max-width: 100%;
+        user-select: none;
+        padding-top: 0.18em;
+        padding-left: 0.18em;
+        margin-top: -0.18em;
+        margin-left: -0.18em;
+        line-height: 0.92;
+        letter-spacing: -0.035em;
+        white-space: nowrap;
+      }
+      .echo-layer {
+        position: absolute;
+        top: 0.18em;
+        left: 0.18em;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.035em;
+        line-height: 0.92;
+        white-space: nowrap;
+        text-transform: uppercase;
+      }
+      .echo-layer-1 { transform: translate(-0.04em, -0.04em); color: #bfbfbf; z-index: 1; }
+      .echo-layer-2 { transform: translate(-0.08em, -0.08em); color: #c7c7c7; z-index: 2; }
+      .echo-layer-3 { transform: translate(-0.12em, -0.12em); color: #cfcfcf; z-index: 3; }
+      .echo-layer-4 { transform: translate(-0.16em, -0.16em); color: #d9d9d9; z-index: 4; }
+      .echo-foreground {
+        position: relative;
+        color: #111111;
+        z-index: 10;
+        white-space: nowrap;
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.035em;
+        line-height: 0.92;
+        text-transform: uppercase;
+      }
+
+      /* Micro-interactions: 700ms cubic-bezier(0.77, 0, 0.175, 1) */
+      .swiss-reveal-image {
+        clip-path: inset(0 0 0 0);
+        transition: clip-path 700ms cubic-bezier(0.77, 0, 0.175, 1), transform 700ms cubic-bezier(0.77, 0, 0.175, 1);
+        filter: none;
+      }
+      .swiss-reveal-image:hover,
+      .group:hover .swiss-reveal-image {
+        transform: scale(1.05);
+      }
+      .swiss-card {
+        background: #ffffff;
+        border: 1px solid #111111;
+        transition: transform 300ms cubic-bezier(0.77, 0, 0.175, 1);
+      }
+      .swiss-card:hover {
+        transform: translateY(-4px);
+      }
+      .geo-tag {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        padding: 3px 8px;
+        border: 1px solid #111111;
+        display: inline-flex;
+        align-items: center;
+        line-height: 1.2;
+      }
+
+      @keyframes marquee {
         0% { transform: translateX(0%); }
         100% { transform: translateX(-50%); }
       }
-      .animate-marquee-linear {
+      .animate-marquee {
         display: flex;
         width: max-content;
-        animation: marquee-scroll 40s linear infinite;
-        will-change: transform;
+        animation: marquee 30s linear infinite;
+      }
+      .animate-marquee:hover {
+        animation-play-state: paused;
       }
     </style>
   </head>
-  <body class="bg-[#F5F1E3] text-[#2C2C2C] antialiased selection:bg-[#FCD758] selection:text-[#2C2C2C]">
+  <body class="bg-[#f2f2f2] text-[#111111] antialiased selection:bg-[#111111] selection:text-[#f2f2f2]">
 
-    <!-- ====================================================================
-         SECTION 1: STICKY NAVIGATION BAR (Retro Red #BC2C2C)
-         ==================================================================== -->
-    <header class="sticky top-0 z-40 bg-[#BC2C2C] border-b-2 border-[#2C2C2C] text-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between">
+    <!-- NAV -->
+    <header class="sticky top-0 z-40 bg-[#f2f2f2] border-b border-[#111111] text-[#111111]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         <a href="#" class="flex items-center gap-3 group focus:outline-hidden">
-          <div class="bg-[#2C2C2C] text-[#FCD758] px-3 py-1 font-montserrat font-black text-xl tracking-tighter border-2 border-[#2C2C2C] group-hover:bg-white group-hover:text-[#BC2C2C] transition-colors">
-            AGT
-          </div>
+          <div class="w-9 h-9 bg-[#111111] text-[#f2f2f2] flex items-center justify-center font-clash text-sm tracking-tight shrink-0">A</div>
           <div class="flex flex-col">
-            <span class="font-montserrat font-black text-xl sm:text-2xl tracking-tighter leading-none uppercase text-white">
-              ALPHAA
-            </span>
-            <span class="text-[9px] font-black uppercase tracking-[0.2em] text-[#FCD758] leading-tight">
-              GLOBAL TRADERS · EST. 1974
-            </span>
+            <span class="font-clash text-lg sm:text-xl uppercase tracking-[-0.05em] leading-[0.92] text-[#111111]">ALPHAA GLOBAL TRADERS</span>
+            <span class="text-[10px] font-mono-swiss text-[#838282] tracking-widest uppercase mt-1">EXIM HOUSE · EST. 1974 · MUMBAI / JNPT</span>
           </div>
         </a>
-
-        <nav class="hidden md:flex items-center gap-6 text-[10px] font-black uppercase tracking-[0.15em] text-white">
-          <a href="#products" class="hover:text-[#FCD758] transition-colors py-2 border-b-2 border-transparent hover:border-[#FCD758]">CATALOGUE</a>
-          <a href="#editorial" class="hover:text-[#FCD758] transition-colors py-2 border-b-2 border-transparent hover:border-[#FCD758]">EDITORIAL</a>
-          <a href="#process" class="hover:text-[#FCD758] transition-colors py-2 border-b-2 border-transparent hover:border-[#FCD758]">HOW WE EXPORT</a>
-          <a href="#contact" class="hover:text-[#FCD758] transition-colors py-2 border-b-2 border-transparent hover:border-[#FCD758]">TRADE DESK</a>
+        <nav class="hidden md:flex items-center gap-8 text-[11px] font-mono-swiss uppercase tracking-wider text-[#111111]">
+          <a href="#catalogue" class="hover:text-[#838282] transition-colors py-2">[ 01 CATALOGUE ]</a>
+          <a href="#index" class="hover:text-[#838282] transition-colors py-2">[ 02 ARCHIVE INDEX ]</a>
+          <a href="#protocol" class="hover:text-[#838282] transition-colors py-2">[ 03 EXPORT PROTOCOL ]</a>
+          <a href="#trade-desk" class="hover:text-[#838282] transition-colors py-2">[ 04 TRADE DESK ]</a>
         </nav>
-
-        <div class="flex items-center gap-4">
-          <button
-            type="button"
-            id="search-toggle-btn"
-            class="w-10 h-10 border-2 border-[#2C2C2C] bg-white text-[#2C2C2C] flex items-center justify-center hover:bg-[#FCD758] transition-colors cursor-pointer"
-            aria-label="Search export catalogue"
-          >
-            <svg class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="square" stroke-linejoin="miter" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-            </svg>
-          </button>
-
-          <button
-            type="button"
-            id="cart-toggle-btn"
-            class="relative w-10 h-10 border-2 border-[#2C2C2C] bg-white text-[#2C2C2C] flex items-center justify-center hover:bg-[#FCD758] transition-colors cursor-pointer"
-            aria-label="View Order Manifest Cart"
-          >
-            <svg class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="square" stroke-linejoin="miter" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-            </svg>
-            <span
-              id="cart-badge"
-              class="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-white text-[#BC2C2C] text-[8px] font-black border border-[#2C2C2C] flex items-center justify-center leading-none"
-            >
-              2
-            </span>
-          </button>
-        </div>
       </div>
     </header>
 
-    <!-- ====================================================================
-         SECTION 2: HERO SECTION (Full-bleed #BC2C2C, Watermark STRIDE, 9xl)
-         ==================================================================== -->
-    <section class="relative bg-[#BC2C2C] text-white overflow-hidden border-b-2 border-[#2C2C2C] min-h-[82vh] flex items-center">
-      <div
-        aria-hidden="true"
-        class="absolute right-[-4vw] top-1/2 -translate-y-1/2 font-montserrat font-black text-[25vw] leading-none text-white opacity-[0.08] select-none pointer-events-none tracking-tighter"
-      >
-        STRIDE
-      </div>
+    <!-- HERO WITH THE ECHO EFFECT -->
+    <section class="relative bg-[#f2f2f2] text-[#111111] overflow-hidden border-b border-[#111111] py-14 sm:py-20 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between border-b border-[#111111] pb-3 mb-8 text-[11px] font-mono-swiss text-[#838282] uppercase tracking-wider">
+          <div class="flex items-center gap-4">
+            <span class="text-[#111111] font-bold">[ SPECIFICATION SHEET ]</span>
+            <span>SERIES 2026 // GLOBAL B2B COMMODITY SUPPLY</span>
+          </div>
+          <div class="hidden sm:block">NHAVA SHEVA · MUNDRA · CHENNAI</div>
+        </div>
 
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative z-10 w-full">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
-          <div class="lg:col-span-7 flex flex-col items-start">
-            <div class="inline-flex items-center gap-2 bg-[#2C2C2C] text-[#FCD758] px-3 py-1 mb-6 border-2 border-white/20">
-              <span class="w-2 h-2 bg-[#FCD758]"></span>
-              <span class="font-open-sans text-[10px] font-black uppercase tracking-[0.1em]">
-                VOL. 74 // MARITIME EXPORT DISPATCH
-              </span>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+          <div class="lg:col-span-7 flex flex-col items-start pt-1">
+            <div class="mb-5">
+              <span class="geo-tag bg-white text-[#111111]">FIG. 01 — ARCHIVAL EXPORT MANIFEST</span>
             </div>
 
-            <h1 class="font-montserrat font-black text-5xl sm:text-7xl md:text-8xl lg:text-9xl uppercase tracking-[-0.05em] leading-[0.85] text-white mb-6">
-              CONNECTING<br />
-              INDIA TO<br />
-              THE WORLD
-            </h1>
+            <!-- The Echo Effect -->
+            <div class="echo-container text-4xl sm:text-6xl md:text-7xl lg:text-[5.25rem] xl:text-[6rem] font-clash leading-[0.9] tracking-[-0.05em] uppercase mb-1">
+              <span class="echo-layer echo-layer-4" aria-hidden="true">CONNECTING</span>
+              <span class="echo-layer echo-layer-3" aria-hidden="true">CONNECTING</span>
+              <span class="echo-layer echo-layer-2" aria-hidden="true">CONNECTING</span>
+              <span class="echo-layer echo-layer-1" aria-hidden="true">CONNECTING</span>
+              <h1 class="echo-foreground">CONNECTING</h1>
+            </div>
 
-            <p class="font-open-sans text-base sm:text-lg font-normal text-white/95 max-w-xl leading-[1.6] mb-8">
-              Certified export shipments of genuine Indian commodities, organic textiles, Tellicherry spices, carved rosewood, and ISO-tested engineering valves shipped from Mundra and Nhava Sheva.
+            <div class="echo-container text-4xl sm:text-6xl md:text-7xl lg:text-[5.25rem] xl:text-[6rem] font-clash leading-[0.9] tracking-[-0.05em] uppercase mb-1">
+              <span class="echo-layer echo-layer-4" aria-hidden="true">INDIA TO</span>
+              <span class="echo-layer echo-layer-3" aria-hidden="true">INDIA TO</span>
+              <span class="echo-layer echo-layer-2" aria-hidden="true">INDIA TO</span>
+              <span class="echo-layer echo-layer-1" aria-hidden="true">INDIA TO</span>
+              <span class="echo-foreground block">INDIA TO</span>
+            </div>
+
+            <div class="echo-container text-4xl sm:text-6xl md:text-7xl lg:text-[5.25rem] xl:text-[6rem] font-clash leading-[0.9] tracking-[-0.05em] uppercase mb-6 sm:mb-8">
+              <span class="echo-layer echo-layer-4" aria-hidden="true">THE WORLD.</span>
+              <span class="echo-layer echo-layer-3" aria-hidden="true">THE WORLD.</span>
+              <span class="echo-layer echo-layer-2" aria-hidden="true">THE WORLD.</span>
+              <span class="echo-layer echo-layer-1" aria-hidden="true">THE WORLD.</span>
+              <span class="echo-foreground block">THE WORLD.</span>
+            </div>
+
+            <p class="font-satoshi text-base sm:text-lg text-[#111111] max-w-xl leading-relaxed mb-8">
+              Certified merchant export house bridging authentic Indian agricultural commodities, Tellicherry estate spices, combed organic textiles, and ISO-tested industrial valves directly to wholesale importers worldwide.
             </p>
 
             <div class="flex flex-wrap items-center gap-4">
-              <a
-                href="#products"
-                class="px-8 py-4 bg-[#2C2C2C] text-white text-[12px] font-black uppercase tracking-widest border-2 border-[#2C2C2C] hover:bg-[#FCD758] hover:text-[#2C2C2C] transition-colors inline-flex items-center gap-3 cursor-pointer shadow-editorial-8"
-              >
-                <span>EXPLORE CATALOGUE</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                  <path stroke-linecap="square" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                </svg>
-              </a>
-
-              <a
-                href="#contact"
-                class="px-6 py-4 bg-transparent text-white text-[12px] font-black uppercase tracking-widest border-2 border-white hover:bg-white hover:text-[#BC2C2C] transition-colors inline-flex items-center cursor-pointer"
-              >
-                REQUEST PROFORMA
-              </a>
+              <a href="#catalogue" class="px-7 py-3.5 bg-[#111111] text-[#f2f2f2] text-xs font-mono-swiss uppercase tracking-widest border border-[#111111]">[ VIEW CATALOGUE ] →</a>
+              <a href="#trade-desk" class="px-7 py-3.5 bg-transparent text-[#111111] text-xs font-mono-swiss uppercase tracking-widest border border-[#111111]">[ REQUEST PROFORMA ]</a>
             </div>
 
-            <div class="mt-10 pt-6 border-t border-white/20 grid grid-cols-3 gap-6 w-full max-w-lg">
+            <div class="mt-10 pt-6 border-t border-[#111111] grid grid-cols-3 gap-6 w-full max-w-lg">
               <div>
-                <span class="block text-[9px] font-black uppercase tracking-widest text-[#FCD758]">CONTAINERS</span>
-                <span class="font-montserrat font-black text-2xl text-white">4,850+</span>
+                <span class="block text-[10px] font-mono-swiss text-[#838282] uppercase tracking-wider mb-1">CONTAINERS DELIVERED</span>
+                <span class="font-clash text-2xl sm:text-3xl text-[#111111]">4,850+</span>
               </div>
               <div>
-                <span class="block text-[9px] font-black uppercase tracking-widest text-[#FCD758]">DESTINATIONS</span>
-                <span class="font-montserrat font-black text-2xl text-white">38 PORTS</span>
+                <span class="block text-[10px] font-mono-swiss text-[#838282] uppercase tracking-wider mb-1">DESTINATION PORTS</span>
+                <span class="font-clash text-2xl sm:text-3xl text-[#111111]">38</span>
               </div>
               <div>
-                <span class="block text-[9px] font-black uppercase tracking-widest text-[#FCD758]">SPEC VERIFICATION</span>
-                <span class="font-montserrat font-black text-2xl text-white">100% LAB</span>
+                <span class="block text-[10px] font-mono-swiss text-[#838282] uppercase tracking-wider mb-1">QUALITY COMPLIANCE</span>
+                <span class="font-clash text-2xl sm:text-3xl text-[#111111]">100%</span>
               </div>
             </div>
           </div>
 
-          <div class="lg:col-span-5 flex justify-center lg:justify-end">
-            <div class="relative w-full max-w-md group">
-              <div class="bg-[#5DA4C9] p-4 border-2 border-[#2C2C2C] shadow-editorial-16 transition-transform">
-                <div class="relative aspect-4/5 w-full overflow-hidden border-2 border-[#2C2C2C] bg-white">
-                  <img
-                    src="/src/assets/images/hero_cargo_ship_1792511625875.jpg"
-                    alt="Maritime Container Ship at Mumbai Port"
-                    class="w-full h-full object-cover editorial-img"
-                  />
-                  <div class="absolute bottom-4 left-4 bg-[#FCD758] text-[#2C2C2C] border-2 border-[#2C2C2C] px-3 py-1 font-montserrat font-black text-[10px] uppercase tracking-widest shadow-editorial-4">
-                    DEEP-SEA BERTH 09 // READY
-                  </div>
-                </div>
-
-                <div class="mt-3 flex items-center justify-between text-[#2C2C2C]">
-                  <span class="font-open-sans text-[10px] font-black uppercase tracking-widest">
-                    FIG. 01 — FREIGHT TERMINAL
-                  </span>
-                  <span class="font-mono text-xs font-bold">NHAVA SHEVA</span>
-                </div>
+          <div class="lg:col-span-5 flex flex-col pt-1">
+            <div class="border border-[#111111] p-3.5 bg-white group">
+              <div class="relative aspect-4/5 w-full overflow-hidden bg-gradient-to-b from-[#bfbfbf] to-[#d9d9d9] border border-[#111111]">
+                <img src="/src/assets/images/hero_cargo_ship_1792511625875.jpg" alt="Vessel at JNPT" class="w-full h-full object-cover swiss-reveal-image" />
+                <div class="absolute bottom-3 left-3 bg-[#111111] text-[#f2f2f2] px-2.5 py-1 text-[10px] font-mono-swiss uppercase">VESSEL: BERTH 09 READY</div>
+              </div>
+              <div class="mt-3 flex items-center justify-between text-[10px] font-mono-swiss text-[#838282] uppercase">
+                <span>TERMINAL JNPT-MUMBAI</span>
+                <span class="text-[#111111] font-bold">18.9499° N, 72.9515° E</span>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ====================================================================
-         SECTION 3: BRAND TICKER (Infinite horizontal marquee, #5DA4C9)
-         ==================================================================== -->
-    <div class="bg-[#5DA4C9] border-t-2 border-b-2 border-[#2C2C2C] overflow-hidden py-3">
-      <div class="animate-marquee-linear flex items-center whitespace-nowrap text-white font-montserrat text-[18px] uppercase font-bold tracking-[0.2em]">
-        <span class="mx-6">★ ALPHAA GLOBAL TRADERS</span>
-        <span class="mx-6">★ MALABAR WHOLE SPICES</span>
-        <span class="mx-6">★ COMBED RAW TEXTILES</span>
-        <span class="mx-6">★ ANSI CLASS FLANGE VALVES</span>
-        <span class="mx-6">★ AGED BASMATI COMMODITIES</span>
-        <span class="mx-6">★ DIRECT MARITIME CORRIDOR</span>
-        <span class="mx-6">★ CARVED ROSEWOOD HANDICRAFTS</span>
-        <span class="mx-6">★ 38 DESTINATION PORTS</span>
-        <span class="mx-6">★ ESTABLISHED 1974</span>
-        <span class="mx-6">★ ALPHAA GLOBAL TRADERS</span>
-        <span class="mx-6">★ MALABAR WHOLE SPICES</span>
-        <span class="mx-6">★ COMBED RAW TEXTILES</span>
-        <span class="mx-6">★ ANSI CLASS FLANGE VALVES</span>
-        <span class="mx-6">★ AGED BASMATI COMMODITIES</span>
-        <span class="mx-6">★ DIRECT MARITIME CORRIDOR</span>
-        <span class="mx-6">★ CARVED ROSEWOOD HANDICRAFTS</span>
-        <span class="mx-6">★ 38 DESTINATION PORTS</span>
-        <span class="mx-6">★ ESTABLISHED 1974</span>
+    <!-- METRIC TICKER -->
+    <div class="bg-[#f2f2f2] border-b border-[#111111] py-3 text-xs font-mono-swiss text-[#111111] overflow-hidden whitespace-nowrap">
+      <div class="animate-marquee flex items-center gap-8">
+        <span>[ 01 ] SPICES & RESINS</span>
+        <span class="text-[#b6b5b5]">/</span>
+        <span>[ 02 ] GOTS ORGANIC TEXTILES</span>
+        <span class="text-[#b6b5b5]">/</span>
+        <span>[ 03 ] ANSI FLANGED VALVES</span>
+        <span class="text-[#b6b5b5]">/</span>
+        <span>[ 04 ] AGED BASMATI GRAINS</span>
+        <span class="text-[#b6b5b5]">/</span>
+        <span>[ 05 ] ROSEWOOD COMMODITIES</span>
+        <span class="text-[#b6b5b5]">/</span>
+        <span>[ 06 ] 38 GLOBAL DESTINATION PORTS</span>
+        <span class="text-[#b6b5b5]">/</span>
+        <span>[ 01 ] SPICES & RESINS</span>
+        <span class="text-[#b6b5b5]">/</span>
+        <span>[ 02 ] GOTS ORGANIC TEXTILES</span>
       </div>
     </div>
 
-    <!-- ====================================================================
-         SECTION 4: PRODUCT GRID (Background: #F5F1E3, 4 Columns)
-         ==================================================================== -->
-    <section id="products" class="bg-[#F5F1E3] py-20 px-4 sm:px-6 lg:px-8 border-b-2 border-[#2C2C2C]">
+    <!-- CATALOGUE -->
+    <section id="catalogue" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-[#f2f2f2] border-b border-[#111111]">
       <div class="max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-          <div>
-            <div class="utility-label text-[#BC2C2C] mb-2">
-              CATALOGUE OF EXPORT SHIPMENTS // 2026 CYCLE
-            </div>
-            <h2 class="font-montserrat font-black text-4xl sm:text-5xl uppercase leading-[0.85] text-[#2C2C2C]">
-              OUR EXPORT PRODUCTS
-            </h2>
-          </div>
-
-          <div class="flex flex-wrap gap-2">
-            <button
-              type="button"
-              data-category="ALL"
-              class="filter-btn px-4 py-2 text-[10px] font-black uppercase tracking-widest border-2 border-[#2C2C2C] bg-[#2C2C2C] text-white shadow-editorial-4 transition-colors cursor-pointer"
-            >
-              ALL
-            </button>
-            <button
-              type="button"
-              data-category="FOOTWEAR"
-              class="filter-btn px-4 py-2 text-[10px] font-black uppercase tracking-widest border-2 border-[#2C2C2C] bg-white text-[#2C2C2C] hover:bg-[#FCD758] transition-colors cursor-pointer"
-            >
-              FOOTWEAR
-            </button>
-            <button
-              type="button"
-              data-category="TEXTILES"
-              class="filter-btn px-4 py-2 text-[10px] font-black uppercase tracking-widest border-2 border-[#2C2C2C] bg-white text-[#2C2C2C] hover:bg-[#FCD758] transition-colors cursor-pointer"
-            >
-              TEXTILES
-            </button>
-            <button
-              type="button"
-              data-category="SPICES"
-              class="filter-btn px-4 py-2 text-[10px] font-black uppercase tracking-widest border-2 border-[#2C2C2C] bg-white text-[#2C2C2C] hover:bg-[#FCD758] transition-colors cursor-pointer"
-            >
-              SPICES
-            </button>
-            <button
-              type="button"
-              data-category="COMMODITIES"
-              class="filter-btn px-4 py-2 text-[10px] font-black uppercase tracking-widest border-2 border-[#2C2C2C] bg-white text-[#2C2C2C] hover:bg-[#FCD758] transition-colors cursor-pointer"
-            >
-              COMMODITIES
-            </button>
-            <button
-              type="button"
-              data-category="ENGINEERING"
-              class="filter-btn px-4 py-2 text-[10px] font-black uppercase tracking-widest border-2 border-[#2C2C2C] bg-white text-[#2C2C2C] hover:bg-[#FCD758] transition-colors cursor-pointer"
-            >
-              ENGINEERING
-            </button>
-          </div>
+        <div class="pb-6 mb-10 border-b border-[#111111]">
+          <span class="text-[10px] font-mono-swiss text-[#838282] uppercase tracking-widest block mb-1">[ SECTION 01 // EXPORT LOTS ]</span>
+          <h2 class="font-clash text-3xl sm:text-5xl uppercase tracking-[-0.05em] leading-[0.92] text-[#111111]">PRODUCT CATALOGUE</h2>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          
-          <div data-category="FOOTWEAR" class="product-card bg-white border-2 border-[#2C2C2C] flex flex-col justify-between group hover:shadow-editorial-8 transition-shadow">
+          <div class="swiss-card p-4 flex flex-col justify-between group">
             <div>
-              <div class="p-3 bg-[#F5F1E3] border-b-2 border-[#2C2C2C]">
-                <div class="aspect-square bg-[#5DA4C9] overflow-hidden border border-[#2C2C2C]">
-                  <img src="/src/assets/images/product_indian_textiles_1792511627399.jpg" alt="Stride Classic Derby 1974" class="w-full h-full object-cover editorial-img" />
-                </div>
+              <div class="aspect-square bg-gradient-to-b from-[#bfbfbf] to-[#d9d9d9] overflow-hidden border border-[#111111] mb-3.5">
+                <img src="/src/assets/images/product_indian_textiles_1792511627399.jpg" alt="Stride Derby" class="w-full h-full object-cover swiss-reveal-image" />
               </div>
-              <div class="p-4">
-                <div class="flex items-center justify-between text-[10px] uppercase font-bold mb-1">
-                  <span class="text-slate-500 tracking-widest">STRIDE GOODS</span>
-                  <span class="font-mono text-[#BC2C2C] font-black">$185.00</span>
-                </div>
-                <h3 class="font-montserrat font-black text-sm uppercase text-[#2C2C2C] leading-snug mb-2">STRIDE CLASSIC DERBY 1974</h3>
-                <p class="font-open-sans text-xs text-slate-600 line-clamp-2 leading-relaxed mb-3">Full-grain oiled pull-up leather upper, storm welt construction, solid brass eyelets.</p>
-                <div class="inline-block bg-[#F5F1E3] border border-[#2C2C2C] px-2 py-0.5 text-[9px] font-black uppercase text-[#2C2C2C]">ASTM-F2413 / ISO 20345</div>
+              <div class="flex items-baseline justify-between text-[10px] font-mono-swiss text-[#838282] uppercase mb-1">
+                <span>STRIDE ATELIER</span>
+                <span class="font-clash text-sm text-[#111111] font-bold">$185.00</span>
               </div>
+              <h3 class="font-clash text-base uppercase text-[#111111] tracking-[-0.05em] leading-[1.0] min-h-[2.5rem] flex items-center mb-2">STRIDE CLASSIC DERBY 1974</h3>
+              <p class="font-satoshi text-xs text-[#838282] line-clamp-2 min-h-[2.5rem] leading-relaxed mb-3">Full-grain oiled pull-up leather upper, storm welt construction.</p>
+              <div class="inline-block border border-[#111111] px-2 py-0.5 text-[9px] font-mono-swiss uppercase">ASTM-F2413 / ISO 20345</div>
             </div>
-            <div class="p-4 pt-0">
-              <button type="button" data-product-id="prod-1" class="add-to-cart-btn w-full py-2.5 bg-[#2C2C2C] text-white text-[10px] font-black uppercase tracking-widest hover:bg-[#FCD758] hover:text-[#2C2C2C] border-2 border-[#2C2C2C] transition-colors cursor-pointer">ADD TO MANIFEST</button>
+            <div class="mt-4 pt-3 border-t border-[#f2f2f2]">
+              <button class="w-full py-2.5 bg-transparent hover:bg-[#111111] text-[#111111] hover:text-[#f2f2f2] border border-[#111111] text-xs font-mono-swiss uppercase tracking-wider transition-all cursor-pointer">+ ALLOCATE TO MANIFEST</button>
             </div>
           </div>
 
-          <div data-category="SPICES" class="product-card bg-white border-2 border-[#2C2C2C] flex flex-col justify-between group hover:shadow-editorial-8 transition-shadow">
+          <div class="swiss-card p-4 flex flex-col justify-between group">
             <div>
-              <div class="p-3 bg-[#F5F1E3] border-b-2 border-[#2C2C2C]">
-                <div class="aspect-square bg-[#5DA4C9] overflow-hidden border border-[#2C2C2C]">
-                  <img src="/src/assets/images/product_indian_spices_1792511627303.jpg" alt="Malabar Black Pepper Bold" class="w-full h-full object-cover editorial-img" />
-                </div>
+              <div class="aspect-square bg-gradient-to-b from-[#bfbfbf] to-[#d9d9d9] overflow-hidden border border-[#111111] mb-3.5">
+                <img src="/src/assets/images/product_indian_spices_1792511627303.jpg" alt="Malabar Pepper" class="w-full h-full object-cover swiss-reveal-image" />
               </div>
-              <div class="p-4">
-                <div class="flex items-center justify-between text-[10px] uppercase font-bold mb-1">
-                  <span class="text-slate-500 tracking-widest">ALPHAA SPICE CO</span>
-                  <span class="font-mono text-[#BC2C2C] font-black">$6,450.00 / MT</span>
-                </div>
-                <h3 class="font-montserrat font-black text-sm uppercase text-[#2C2C2C] leading-snug mb-2">MALABAR BLACK PEPPER BOLD 550GL</h3>
-                <p class="font-open-sans text-xs text-slate-600 line-clamp-2 leading-relaxed mb-3">Sun-cured Tellicherry whole black peppercorns, steam sterilized, piperine 5.8% min.</p>
-                <div class="inline-block bg-[#F5F1E3] border border-[#2C2C2C] px-2 py-0.5 text-[9px] font-black uppercase text-[#2C2C2C]">ASTA / ESA QUALITY</div>
+              <div class="flex items-baseline justify-between text-[10px] font-mono-swiss text-[#838282] uppercase mb-1">
+                <span>ALPHAA SPICE CO</span>
+                <span class="font-clash text-sm text-[#111111] font-bold">$6,450.00 / MT</span>
               </div>
+              <h3 class="font-clash text-base uppercase text-[#111111] tracking-[-0.05em] leading-[1.0] min-h-[2.5rem] flex items-center mb-2">MALABAR BLACK PEPPER BOLD 550GL</h3>
+              <p class="font-satoshi text-xs text-[#838282] line-clamp-2 min-h-[2.5rem] leading-relaxed mb-3">Sun-cured Tellicherry whole black peppercorns, steam sterilized.</p>
+              <div class="inline-block border border-[#111111] px-2 py-0.5 text-[9px] font-mono-swiss uppercase">ASTA / ESA QUALITY</div>
             </div>
-            <div class="p-4 pt-0">
-              <button type="button" data-product-id="prod-2" class="add-to-cart-btn w-full py-2.5 bg-[#2C2C2C] text-white text-[10px] font-black uppercase tracking-widest hover:bg-[#FCD758] hover:text-[#2C2C2C] border-2 border-[#2C2C2C] transition-colors cursor-pointer">ADD TO MANIFEST</button>
+            <div class="mt-4 pt-3 border-t border-[#f2f2f2]">
+              <button class="w-full py-2.5 bg-transparent hover:bg-[#111111] text-[#111111] hover:text-[#f2f2f2] border border-[#111111] text-xs font-mono-swiss uppercase tracking-wider transition-all cursor-pointer">+ ALLOCATE TO MANIFEST</button>
             </div>
           </div>
 
-          <div data-category="FOOTWEAR" class="product-card bg-white border-2 border-[#2C2C2C] flex flex-col justify-between group hover:shadow-editorial-8 transition-shadow">
+          <div class="swiss-card p-4 flex flex-col justify-between group">
             <div>
-              <div class="p-3 bg-[#F5F1E3] border-b-2 border-[#2C2C2C]">
-                <div class="aspect-square bg-[#5DA4C9] overflow-hidden border border-[#2C2C2C]">
-                  <img src="/src/assets/images/product_indian_textiles_1792511627399.jpg" alt="Vintage Runner Low-Top Chop" class="w-full h-full object-cover editorial-img" />
-                </div>
+              <div class="aspect-square bg-gradient-to-b from-[#bfbfbf] to-[#d9d9d9] overflow-hidden border border-[#111111] mb-3.5">
+                <img src="/src/assets/images/product_indian_textiles_1792511627399.jpg" alt="Cotton Fabric" class="w-full h-full object-cover swiss-reveal-image" />
               </div>
-              <div class="p-4">
-                <div class="flex items-center justify-between text-[10px] uppercase font-bold mb-1">
-                  <span class="text-slate-500 tracking-widest">STRIDE ATELIER</span>
-                  <span class="font-mono text-[#BC2C2C] font-black">$140.00</span>
-                </div>
-                <h3 class="font-montserrat font-black text-sm uppercase text-[#2C2C2C] leading-snug mb-2">VINTAGE RUNNER LOW-TOP CHOP</h3>
-                <p class="font-open-sans text-xs text-slate-600 line-clamp-2 leading-relaxed mb-3">Hand-dyed organic canvas, vulcanized natural gum rubber sole, archival 1977 silhouette.</p>
-                <div class="inline-block bg-[#F5F1E3] border border-[#2C2C2C] px-2 py-0.5 text-[9px] font-black uppercase text-[#2C2C2C]">OEKO-TEX 100 CERT</div>
+              <div class="flex items-baseline justify-between text-[10px] font-mono-swiss text-[#838282] uppercase mb-1">
+                <span>MILL DEPT.</span>
+                <span class="font-clash text-sm text-[#111111] font-bold">$4.80 / M</span>
               </div>
+              <h3 class="font-clash text-base uppercase text-[#111111] tracking-[-0.05em] leading-[1.0] min-h-[2.5rem] flex items-center mb-2">GOTS ORGANIC COMBED COTTON 40S</h3>
+              <p class="font-satoshi text-xs text-[#838282] line-clamp-2 min-h-[2.5rem] leading-relaxed mb-3">High-density combed long-staple Indian cotton twill, ecru finish.</p>
+              <div class="inline-block border border-[#111111] px-2 py-0.5 text-[9px] font-mono-swiss uppercase">GOTS VERSION 7.0</div>
             </div>
-            <div class="p-4 pt-0">
-              <button type="button" data-product-id="prod-3" class="add-to-cart-btn w-full py-2.5 bg-[#2C2C2C] text-white text-[10px] font-black uppercase tracking-widest hover:bg-[#FCD758] hover:text-[#2C2C2C] border-2 border-[#2C2C2C] transition-colors cursor-pointer">ADD TO MANIFEST</button>
+            <div class="mt-4 pt-3 border-t border-[#f2f2f2]">
+              <button class="w-full py-2.5 bg-transparent hover:bg-[#111111] text-[#111111] hover:text-[#f2f2f2] border border-[#111111] text-xs font-mono-swiss uppercase tracking-wider transition-all cursor-pointer">+ ALLOCATE TO MANIFEST</button>
             </div>
           </div>
 
-          <div data-category="TEXTILES" class="product-card bg-white border-2 border-[#2C2C2C] flex flex-col justify-between group hover:shadow-editorial-8 transition-shadow">
+          <div class="swiss-card p-4 flex flex-col justify-between group">
             <div>
-              <div class="p-3 bg-[#F5F1E3] border-b-2 border-[#2C2C2C]">
-                <div class="aspect-square bg-[#5DA4C9] overflow-hidden border border-[#2C2C2C]">
-                  <img src="/src/assets/images/product_indian_textiles_1792511627399.jpg" alt="GOTS Organic Combed Cotton" class="w-full h-full object-cover editorial-img" />
-                </div>
+              <div class="aspect-square bg-gradient-to-b from-[#bfbfbf] to-[#d9d9d9] overflow-hidden border border-[#111111] mb-3.5">
+                <img src="/src/assets/images/logistics_container_port_1792511627971.jpg" alt="Valve fittings" class="w-full h-full object-cover swiss-reveal-image" />
               </div>
-              <div class="p-4">
-                <div class="flex items-center justify-between text-[10px] uppercase font-bold mb-1">
-                  <span class="text-slate-500 tracking-widest">MILL DEPT.</span>
-                  <span class="font-mono text-[#BC2C2C] font-black">$4.80 / M</span>
-                </div>
-                <h3 class="font-montserrat font-black text-sm uppercase text-[#2C2C2C] leading-snug mb-2">GOTS ORGANIC COMBED COTTON 40S</h3>
-                <p class="font-open-sans text-xs text-slate-600 line-clamp-2 leading-relaxed mb-3">High-density combed long-staple Indian cotton twill, mercerized raw ecru finish.</p>
-                <div class="inline-block bg-[#F5F1E3] border border-[#2C2C2C] px-2 py-0.5 text-[9px] font-black uppercase text-[#2C2C2C]">GOTS VERSION 7.0</div>
+              <div class="flex items-baseline justify-between text-[10px] font-mono-swiss text-[#838282] uppercase mb-1">
+                <span>PRECISION FOUNDRY</span>
+                <span class="font-clash text-sm text-[#111111] font-bold">$92.00</span>
               </div>
+              <h3 class="font-clash text-base uppercase text-[#111111] tracking-[-0.05em] leading-[1.0] min-h-[2.5rem] flex items-center mb-2">DUCTILE IRON FLANGE VALVE FITTINGS</h3>
+              <p class="font-satoshi text-xs text-[#838282] line-clamp-2 min-h-[2.5rem] leading-relaxed mb-3">Hydrostatically tested ANSI Class 150/300 flanged valves with anti-corrosion seal.</p>
+              <div class="inline-block border border-[#111111] px-2 py-0.5 text-[9px] font-mono-swiss uppercase">ISO 9001 / ASTM A536</div>
             </div>
-            <div class="p-4 pt-0">
-              <button type="button" data-product-id="prod-4" class="add-to-cart-btn w-full py-2.5 bg-[#2C2C2C] text-white text-[10px] font-black uppercase tracking-widest hover:bg-[#FCD758] hover:text-[#2C2C2C] border-2 border-[#2C2C2C] transition-colors cursor-pointer">ADD TO MANIFEST</button>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         SECTION 5: EDITORIAL SECTION (Two-Pane Container, 12px solid #2C2C2C)
-         ==================================================================== -->
-    <section id="editorial" class="py-20 px-4 sm:px-6 lg:px-8 bg-[#FCD758] border-b-2 border-[#2C2C2C]">
-      <div class="max-w-7xl mx-auto">
-        <div class="utility-label text-[#2C2C2C] mb-4">DISPATCH EDITORIAL // QUARTERLY REPORT</div>
-        <div class="border-[12px] border-[#2C2C2C] shadow-editorial-20 bg-white grid grid-cols-1 lg:grid-cols-12 min-h-[560px]">
-          <div class="lg:col-span-4 bg-[#F5F1E3] p-8 sm:p-12 flex flex-col justify-between border-b-4 lg:border-b-0 lg:border-r-4 border-[#2C2C2C]">
-            <div>
-              <span id="editorial-subtitle" class="block font-open-sans text-[10px] font-black uppercase tracking-[0.15em] text-[#BC2C2C] mb-6">ISSUE 04 / DISPATCH 26</span>
-              <h3 class="font-montserrat font-black text-3xl sm:text-4xl lg:text-5xl uppercase leading-[0.85] text-[#2C2C2C] mb-4">THE ATELIER ARCHIVE</h3>
-              <p class="font-open-sans text-xs uppercase tracking-wider text-slate-600 leading-relaxed">Click the circular dial to rotate through trade dispatches, material provenance records, and deep-sea route manifests.</p>
-            </div>
-            <div class="pt-8 flex items-center gap-4">
-              <button
-                type="button"
-                id="editorial-next-btn"
-                class="w-16 h-16 rounded-full bg-[#2C2C2C] text-white border-2 border-[#2C2C2C] flex items-center justify-center hover:bg-[#FCD758] hover:text-[#2C2C2C] transition-transform hover:rotate-45 active:scale-95 cursor-pointer shadow-editorial-4"
-                aria-label="Next dispatch story"
-              >
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                </svg>
-              </button>
-              <span class="text-[10px] font-black uppercase tracking-widest text-[#2C2C2C]">NEXT ENTRY</span>
-            </div>
-          </div>
-
-          <div class="lg:col-span-8 bg-white relative p-8 sm:p-16 flex flex-col justify-between overflow-hidden">
-            <div class="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none select-none overflow-hidden">
-              <img id="editorial-watermark-img" src="/src/assets/images/hero_cargo_ship_1792511625875.jpg" alt="Editorial Watermark" class="w-full h-full object-cover filter grayscale contrast-125 scale-105" />
-            </div>
-            <div id="editorial-watermark-text" aria-hidden="true" class="absolute -top-6 right-4 font-montserrat font-black text-8xl sm:text-9xl text-[#5DA4C9] opacity-25 select-none pointer-events-none tracking-tighter">CRAFT</div>
-            <div class="relative z-10">
-              <span class="bg-[#5DA4C9] text-white px-3 py-1 text-[10px] font-black uppercase tracking-widest border border-[#2C2C2C]">VERIFIED ARCHIVE RECORD</span>
-            </div>
-            <div class="relative z-10 mt-24">
-              <h2 id="editorial-headline" class="font-montserrat font-black text-3xl sm:text-5xl lg:text-6xl uppercase leading-[0.85] text-[#2C2C2C] mb-4 max-w-2xl">THE ARCHITECTURAL SOLE</h2>
-              <p id="editorial-tagline" class="font-open-sans text-xs sm:text-sm font-semibold uppercase tracking-wider text-slate-700 max-w-xl mb-8 leading-relaxed">VULCANIZED NATURAL RUBBER FUSED WITH HIGH-DENSITY HEAVY CANVAS.</p>
-              <a id="editorial-cta" href="#products" class="inline-block px-8 py-4 bg-[#2C2C2C] text-white text-[12px] font-black uppercase tracking-widest border-2 border-[#2C2C2C] hover:bg-[#FCD758] hover:text-[#2C2C2C] transition-colors cursor-pointer shadow-editorial-8">EXPLORE THE ATELIER</a>
+            <div class="mt-4 pt-3 border-t border-[#f2f2f2]">
+              <button class="w-full py-2.5 bg-transparent hover:bg-[#111111] text-[#111111] hover:text-[#f2f2f2] border border-[#111111] text-xs font-mono-swiss uppercase tracking-wider transition-all cursor-pointer">+ ALLOCATE TO MANIFEST</button>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ====================================================================
-         SECTION 6: EXPORT PROCESS WORKFLOW (Brutalist Step Cards)
-         ==================================================================== -->
-    <section id="process" class="py-20 px-4 sm:px-6 lg:px-8 bg-[#F5F1E3] border-b-2 border-[#2C2C2C]">
-      <div class="max-w-7xl mx-auto">
-        <div class="utility-label text-[#BC2C2C] mb-2">LOGISTICS PROTOCOL // TIMELINE</div>
-        <h2 class="font-montserrat font-black text-4xl sm:text-5xl uppercase leading-[0.85] text-[#2C2C2C] mb-12">HOW EXPORTING WORKS</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="border-2 border-[#2C2C2C] bg-white p-6 shadow-editorial-8">
-            <div class="font-montserrat font-black text-4xl text-[#BC2C2C] mb-2">01</div>
-            <h4 class="font-montserrat font-black text-base uppercase text-[#2C2C2C] mb-3">ENQUIRY & SPEC</h4>
-            <p class="font-open-sans text-xs text-slate-700 leading-relaxed">Submit product specifications, destination port, incoterms (FOB/CIF), and requested order volume.</p>
-          </div>
-          <div class="border-2 border-[#2C2C2C] bg-white p-6 shadow-editorial-8">
-            <div class="font-montserrat font-black text-4xl text-[#5DA4C9] mb-2">02</div>
-            <h4 class="font-montserrat font-black text-base uppercase text-[#2C2C2C] mb-3">LAB TESTING & LOT</h4>
-            <p class="font-open-sans text-xs text-slate-700 leading-relaxed">Pre-shipment batch inspection, fumigation certification, SGS / Spice Board testing, and barcode packaging.</p>
-          </div>
-          <div class="border-2 border-[#2C2C2C] bg-white p-6 shadow-editorial-8">
-            <div class="font-montserrat font-black text-4xl text-[#FCD758] mb-2">03</div>
-            <h4 class="font-montserrat font-black text-base uppercase text-[#2C2C2C] mb-3">PORT CUSTOMS</h4>
-            <p class="font-open-sans text-xs text-slate-700 leading-relaxed">Port gate-in, shipping bill lodgement, EDI clearance, and container stuffing at bonded CFS yards.</p>
-          </div>
-          <div class="border-2 border-[#2C2C2C] bg-white p-6 shadow-editorial-8">
-            <div class="font-montserrat font-black text-4xl text-[#2C2C2C] mb-2">04</div>
-            <h4 class="font-montserrat font-black text-base uppercase text-[#2C2C2C] mb-3">BILL OF LADING</h4>
-            <p class="font-open-sans text-xs text-slate-700 leading-relaxed">Vessel departure, original negotiable BL issued, complete bank documentation dispatched via DHL express.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         SECTION 7: TRADE DESK CONTACT
-         ==================================================================== -->
-    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-white border-b-2 border-[#2C2C2C]">
-      <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          <div class="lg:col-span-5">
-            <div class="utility-label text-[#BC2C2C] mb-2">EXPORT CONSULTATION & PROFORMA DESK</div>
-            <h2 class="font-montserrat font-black text-4xl sm:text-5xl uppercase leading-[0.85] text-[#2C2C2C] mb-6">LET'S TALK TRADE</h2>
-            <p class="font-open-sans text-sm text-slate-700 leading-relaxed mb-8">Reach out directly to our merchant export desk for quotation requests, container load inquiries, custom private label branding, and samples.</p>
-            <div class="space-y-4 font-open-sans text-xs">
-              <div class="border-2 border-[#2C2C2C] bg-[#F5F1E3] p-4">
-                <span class="block utility-label text-[#BC2C2C] mb-1">HEADQUARTERS</span>
-                <p class="font-bold text-[#2C2C2C] uppercase">ALPHAA GLOBAL TRADERS PVT. LTD.</p>
-                <p class="text-slate-600">Export Towers, Plot 42, Nariman Point, Mumbai 400021, India</p>
-              </div>
-              <div class="border-2 border-[#2C2C2C] bg-[#F5F1E3] p-4">
-                <span class="block utility-label text-[#5DA4C9] mb-1">TRADE CONTACT</span>
-                <p class="font-bold text-[#2C2C2C]">trade@alphaaglobal.com · ops@alphaaglobal.com</p>
-                <p class="text-slate-600">+91 (22) 6890-4400 · WhatsApp: +91 98200 12345</p>
-              </div>
-            </div>
-          </div>
-          <div class="lg:col-span-7">
-            <div class="border-4 border-[#2C2C2C] bg-[#F5F1E3] p-6 sm:p-10 shadow-editorial-16">
-              <h3 class="font-montserrat font-black text-2xl uppercase leading-none text-[#2C2C2C] mb-6">QUOTATION & INVOICE REQUEST</h3>
-              <form onsubmit="event.preventDefault(); document.getElementById('form-success-banner').classList.remove('hidden'); this.reset();" class="space-y-4">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label class="block utility-label text-[#2C2C2C] mb-1">FULL NAME *</label>
-                    <input type="text" required placeholder="E.G. ARTHUR STERLING" class="w-full bg-white border-2 border-[#2C2C2C] p-3 text-xs font-mono font-bold focus:outline-hidden focus:bg-[#FCD758]/20" />
-                  </div>
-                  <div>
-                    <label class="block utility-label text-[#2C2C2C] mb-1">COMPANY NAME *</label>
-                    <input type="text" required placeholder="E.G. NORDIC IMPORTS OY" class="w-full bg-white border-2 border-[#2C2C2C] p-3 text-xs font-mono font-bold focus:outline-hidden focus:bg-[#FCD758]/20" />
-                  </div>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label class="block utility-label text-[#2C2C2C] mb-1">CORPORATE EMAIL *</label>
-                    <input type="email" required placeholder="ARTHUR@NORDICIMPORTS.COM" class="w-full bg-white border-2 border-[#2C2C2C] p-3 text-xs font-mono font-bold focus:outline-hidden focus:bg-[#FCD758]/20" />
-                  </div>
-                  <div>
-                    <label class="block utility-label text-[#2C2C2C] mb-1">DESTINATION PORT / COUNTRY *</label>
-                    <input type="text" required placeholder="ROTTERDAM, NETHERLANDS" class="w-full bg-white border-2 border-[#2C2C2C] p-3 text-xs font-mono font-bold focus:outline-hidden focus:bg-[#FCD758]/20" />
-                  </div>
-                </div>
-                <div id="form-success-banner" class="hidden bg-[#FCD758] border-2 border-[#2C2C2C] p-4 text-[#2C2C2C]">
-                  <p class="font-montserrat font-black text-sm uppercase">TRANSMISSION CONFIRMED</p>
-                  <p class="font-open-sans text-xs uppercase tracking-wider">OUR EXPORT TRADE DESK WILL TRANSMIT FORMAL PROFORMA QUOTE WITHIN 12 HOURS.</p>
-                </div>
-                <button type="submit" class="w-full py-4 bg-[#2C2C2C] text-white font-montserrat font-black text-xs uppercase tracking-widest hover:bg-[#BC2C2C] transition-colors border-2 border-[#2C2C2C] cursor-pointer">
-                  TRANSMIT SPECIFICATION TO TRADE DESK
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         SECTION 8: FOOTER (#2C2C2C Background, 2 Columns, 7xl Brand)
-         ==================================================================== -->
-    <footer class="bg-[#2C2C2C] text-white pt-16 pb-8 border-t-4 border-[#2C2C2C]">
+    <!-- FOOTER -->
+    <footer class="bg-[#f2f2f2] text-[#111111] pt-16 pb-8 border-t border-[#111111]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16">
-          <div class="lg:col-span-5 flex flex-col justify-between">
-            <div>
-              <h2 class="font-montserrat font-black text-5xl sm:text-6xl lg:text-7xl uppercase leading-[0.85] text-white tracking-tighter mb-4">
-                ALPHAA
-              </h2>
-              <p class="font-open-sans text-xs uppercase tracking-widest text-slate-400 max-w-sm mb-6 leading-relaxed">
-                MERCHANT EXPORTER OF RECORD · INDIA TO THE WORLD. SPECIALIZING IN ARCHIVAL GOODS, RAW COMMODITIES, AND CERTIFIED INDUSTRIAL EXPORTS.
-              </p>
-            </div>
-            <div class="flex items-center gap-4 text-xs font-montserrat font-black uppercase tracking-widest">
-              <a href="#" class="px-3 py-1.5 border border-white/20 text-white hover:bg-[#FCD758] hover:text-[#2C2C2C] hover:border-[#FCD758] transition-colors">LN</a>
-              <a href="#" class="px-3 py-1.5 border border-white/20 text-white hover:bg-[#FCD758] hover:text-[#2C2C2C] hover:border-[#FCD758] transition-colors">TW</a>
-              <a href="#" class="px-3 py-1.5 border border-white/20 text-white hover:bg-[#FCD758] hover:text-[#2C2C2C] hover:border-[#FCD758] transition-colors">IG</a>
-              <a href="#" class="px-3 py-1.5 border border-white/20 text-white hover:bg-[#FCD758] hover:text-[#2C2C2C] hover:border-[#FCD758] transition-colors">YT</a>
-            </div>
-          </div>
-
-          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-8">
-            <div>
-              <span class="block text-[#FCD758] text-[10px] font-black uppercase tracking-[0.1em] mb-4">EXPORT DIVISIONS</span>
-              <ul class="space-y-2.5 text-xs text-slate-300 font-open-sans uppercase tracking-wider font-semibold">
-                <li><a href="#products" class="hover:text-white transition-colors">SPICES & ESSENCES</a></li>
-                <li><a href="#products" class="hover:text-white transition-colors">ORGANIC TEXTILES</a></li>
-                <li><a href="#products" class="hover:text-white transition-colors">FOOTWEAR & LEATHER</a></li>
-                <li><a href="#products" class="hover:text-white transition-colors">ENGINEERING VALVES</a></li>
-                <li><a href="#products" class="hover:text-white transition-colors">STEAM BASMATI RICE</a></li>
-              </ul>
-            </div>
-            <div>
-              <span class="block text-[#FCD758] text-[10px] font-black uppercase tracking-[0.1em] mb-4">PORT TERMINALS</span>
-              <ul class="space-y-2.5 text-xs text-slate-300 font-open-sans uppercase tracking-wider font-semibold">
-                <li><span class="text-white">JNPT / NHAVA SHEVA</span></li>
-                <li><span class="text-white">MUNDRA PORT (INMUN1)</span></li>
-                <li><span class="text-white">CHENNAI CONTAINER PORT</span></li>
-                <li><span class="text-white">COCHIN DEEPWATER</span></li>
-              </ul>
-            </div>
-            <div>
-              <span class="block text-[#FCD758] text-[10px] font-black uppercase tracking-[0.1em] mb-4">LEGAL & COMPLIANCE</span>
-              <ul class="space-y-2.5 text-xs text-slate-300 font-open-sans uppercase tracking-wider font-semibold">
-                <li><span class="text-white">DGFT REGISTRATION</span></li>
-                <li><span class="text-white">APEDA / SPICES BOARD</span></li>
-                <li><span class="text-white">FSSAI EXPORT PERMIT</span></li>
-                <li><span class="text-white">SGS LAB VERIFIED</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="border-t border-[#444444] pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[8px] text-slate-400 font-open-sans uppercase tracking-widest">
-          <div>© 2026 ALPHAA GLOBAL TRADERS PVT. LTD. ALL RIGHTS RESERVED. REGISTERED GOVT. OF INDIA RECOGNIZED EXPORT HOUSE.</div>
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] font-mono-swiss text-[#838282]">
+          <div>© 2026 ALPHAA GLOBAL TRADERS PVT. LTD. ALL RIGHTS RESERVED.</div>
           <div class="flex items-center gap-6">
-            <span>IEC NO: 0308029141</span>
+            <span>IEC: 0308029141</span>
             <span>GSTIN: 27AABCA1234F1Z5</span>
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- Standalone interaction script -->
-    <script>
-      const stories = [
-        {
-          subtitle: 'ISSUE 04 / DISPATCH 26',
-          headline: 'THE ARCHITECTURAL SOLE',
-          tagline: 'VULCANIZED NATURAL RUBBER FUSED WITH HIGH-DENSITY HEAVY CANVAS.',
-          watermarkText: 'CRAFT',
-          watermarkImg: '/src/assets/images/hero_cargo_ship_1792511625875.jpg',
-          cta: 'EXPLORE THE ATELIER'
-        },
-        {
-          subtitle: 'TRADE LOGISTICS REPORT',
-          headline: 'DEEPWATER MARITIME RUNNERS',
-          tagline: 'DIRECT FREIGHT CORRIDORS LINKING NHAVA SHEVA TERMINALS TO GLOBAL PORTS.',
-          watermarkText: 'OCEAN',
-          watermarkImg: '/src/assets/images/logistics_container_port_1792511627971.jpg',
-          cta: 'VIEW LOGISTICS MANIFEST'
-        },
-        {
-          subtitle: 'PURE COMMODITY HARVEST',
-          headline: 'MALABAR GOLD & CURCUMIN',
-          tagline: 'ESTATE GROWN WHOLE SPICES SORTED WITH 99.8% SPECIFICATION PURITY.',
-          watermarkText: 'SPICE',
-          watermarkImg: '/src/assets/images/product_indian_spices_1792511627303.jpg',
-          cta: 'ORDER HARVEST LOT'
-        }
-      ];
-
-      let idx = 0;
-      const nextBtn = document.getElementById('editorial-next-btn');
-      if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
-          idx = (idx + 1) % stories.length;
-          const s = stories[idx];
-          document.getElementById('editorial-subtitle').textContent = s.subtitle;
-          document.getElementById('editorial-headline').textContent = s.headline;
-          document.getElementById('editorial-tagline').textContent = s.tagline;
-          document.getElementById('editorial-watermark-text').textContent = s.watermarkText;
-          document.getElementById('editorial-watermark-img').src = s.watermarkImg;
-          document.getElementById('editorial-cta').textContent = s.cta;
-        });
-      }
-
-      const catBtns = document.querySelectorAll('.filter-btn');
-      const cards = document.querySelectorAll('.product-card');
-      catBtns.forEach(b => {
-        b.addEventListener('click', () => {
-          const c = b.getAttribute('data-category');
-          catBtns.forEach(btn => {
-            btn.classList.remove('bg-[#2C2C2C]', 'text-white', 'shadow-editorial-4');
-            btn.classList.add('bg-white', 'text-[#2C2C2C]');
-          });
-          b.classList.remove('bg-white', 'text-[#2C2C2C]');
-          b.classList.add('bg-[#2C2C2C]', 'text-white', 'shadow-editorial-4');
-          cards.forEach(card => {
-            const cardCat = card.getAttribute('data-category');
-            if (c === 'ALL' || cardCat === c) card.classList.remove('hidden');
-            else card.classList.add('hidden');
-          });
-        });
-      });
-    </script>
   </body>
 </html>

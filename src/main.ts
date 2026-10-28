@@ -1,7 +1,7 @@
 /**
- * Retro-Modernist Editorial Interaction Engine
- * Handles cart management, product filtering, search modal,
- * editorial story switcher, and smooth brutalist micro-interactions.
+ * Swiss Minimalist Interaction Engine for Alphaa Global Traders
+ * Powered by Clash Display & Satoshi typography, sharp geometric boundaries,
+ * live order manifest cart, instant search, and Swiss index dispatcher.
  */
 
 import './index.css';
@@ -23,7 +23,7 @@ export const PRODUCTS: ProductItem[] = [
     id: 'prod-1',
     name: 'STRIDE CLASSIC DERBY 1974',
     category: 'FOOTWEAR',
-    brand: 'STRIDE GOODS',
+    brand: 'STRIDE ATELIER',
     price: '$185.00',
     unit: 'PER PAIR (MIN 100 PRS)',
     image: '/src/assets/images/product_indian_textiles_1792511627399.jpg',
@@ -129,6 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const cartItemsList = document.getElementById('cart-items-list');
   const cartSubtotalEl = document.getElementById('cart-subtotal');
   const checkoutBtn = document.getElementById('checkout-btn');
+  const checkoutNotice = document.getElementById('checkout-notice');
 
   const searchToggleBtn = document.getElementById('search-toggle-btn');
   const searchModal = document.getElementById('search-modal');
@@ -150,30 +151,33 @@ document.addEventListener('DOMContentLoaded', () => {
     if (cartItemsList) {
       if (cart.length === 0) {
         cartItemsList.innerHTML = `
-          <div class="py-16 text-center text-[#2C2C2C]">
-            <p class="font-montserrat font-black text-2xl uppercase mb-2">CART IS EMPTY</p>
-            <p class="font-open-sans text-xs uppercase tracking-widest text-slate-500">NO ITEMS CURRENTLY ALLOCATED IN MANIFEST.</p>
+          <div class="py-16 text-center text-[#111111]">
+            <span class="inline-block text-[10px] font-mono tracking-widest text-[#838282] uppercase mb-2">[ EMPTY MANIFEST ]</span>
+            <p class="font-clash text-2xl uppercase tracking-tight">NO COMMODITIES ALLOCATED</p>
+            <p class="font-satoshi text-xs text-[#838282] mt-1">Select items from the product catalogue to generate proforma manifests.</p>
           </div>
         `;
       } else {
         cartItemsList.innerHTML = cart
           .map(
             (item, index) => `
-          <div class="border-2 border-[#2C2C2C] bg-white p-4 mb-4 flex gap-4 items-start relative group">
-            <div class="w-16 h-16 bg-[#5DA4C9] border border-[#2C2C2C] shrink-0 overflow-hidden">
-              <img src="${item.product.image}" alt="${item.product.name}" class="w-full h-full object-cover editorial-img" />
+          <div class="border border-[#111111] bg-white p-4 mb-3 flex gap-4 items-start relative group">
+            <div class="w-16 h-16 border border-[#111111] bg-[#f2f2f2] shrink-0 overflow-hidden">
+              <img src="${item.product.image}" alt="${item.product.name}" class="w-full h-full object-cover swiss-reveal-image" />
             </div>
             <div class="flex-1 min-w-0">
-              <div class="text-[9px] font-black uppercase tracking-widest text-[#5DA4C9]">${item.product.brand}</div>
-              <h4 class="font-montserrat font-black text-xs text-[#2C2C2C] truncate mb-1">${item.product.name}</h4>
-              <div class="text-xs font-bold text-[#BC2C2C] font-mono">${item.product.price}</div>
-              <div class="text-[9px] text-slate-500 uppercase tracking-wider mt-0.5">${item.product.unit}</div>
+              <div class="flex items-baseline justify-between text-[10px] font-mono-swiss text-[#838282] uppercase tracking-wider mb-1">
+                <span>${item.product.brand}</span>
+                <span class="font-clash text-sm text-[#111111] font-bold">${item.product.price}</span>
+              </div>
+              <h4 class="font-clash text-xs uppercase text-[#111111] truncate mb-1">${item.product.name}</h4>
+              <div class="text-[10px] text-[#838282] font-mono-swiss uppercase">${item.product.unit}</div>
               
-              <div class="flex items-center gap-2 mt-3">
-                <button type="button" data-cart-index="${index}" data-action="dec" class="cart-qty-btn w-6 h-6 border-2 border-[#2C2C2C] bg-[#F5F1E3] font-black text-xs flex items-center justify-center hover:bg-[#FCD758]">-</button>
-                <span class="font-mono font-bold text-xs px-2">${item.quantity}</span>
-                <button type="button" data-cart-index="${index}" data-action="inc" class="cart-qty-btn w-6 h-6 border-2 border-[#2C2C2C] bg-[#F5F1E3] font-black text-xs flex items-center justify-center hover:bg-[#FCD758]">+</button>
-                <button type="button" data-cart-index="${index}" data-action="remove" class="cart-qty-btn ml-auto text-[10px] font-black uppercase text-[#BC2C2C] hover:underline">REMOVE</button>
+              <div class="flex items-center gap-2 mt-3 pt-2 border-t border-[#f2f2f2]">
+                <button type="button" data-cart-index="${index}" data-action="dec" class="cart-qty-btn w-6 h-6 border border-[#111111] bg-[#f2f2f2] font-mono-swiss text-xs flex items-center justify-center hover:bg-[#111111] hover:text-white transition-colors cursor-pointer">-</button>
+                <span class="font-mono-swiss text-xs px-2 font-bold text-[#111111]">${item.quantity}</span>
+                <button type="button" data-cart-index="${index}" data-action="inc" class="cart-qty-btn w-6 h-6 border border-[#111111] bg-[#f2f2f2] font-mono-swiss text-xs flex items-center justify-center hover:bg-[#111111] hover:text-white transition-colors cursor-pointer">+</button>
+                <button type="button" data-cart-index="${index}" data-action="remove" class="cart-qty-btn ml-auto text-[10px] font-mono-swiss uppercase text-[#838282] hover:text-[#111111] underline cursor-pointer">REMOVE</button>
               </div>
             </div>
           </div>
@@ -233,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (cartCloseBtn) cartCloseBtn.addEventListener('click', closeCart);
   if (cartBackdrop) cartBackdrop.addEventListener('click', closeCart);
 
-  // Wire "Add to Cart" and "Quick Spec" on product cards
+  // Wire "Add to Cart" on product cards
   const addCartButtons = document.querySelectorAll<HTMLButtonElement>('.add-to-cart-btn');
   addCartButtons.forEach((btn) => {
     btn.addEventListener('click', (e) => {
@@ -259,11 +263,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const cat = btn.getAttribute('data-category');
 
       categoryButtons.forEach((b) => {
-        b.classList.remove('bg-[#2C2C2C]', 'text-white', 'shadow-editorial-4');
-        b.classList.add('bg-white', 'text-[#2C2C2C]');
+        b.classList.remove('bg-[#111111]', 'text-[#f2f2f2]');
+        b.classList.add('bg-transparent', 'text-[#111111]');
       });
-      btn.classList.remove('bg-white', 'text-[#2C2C2C]');
-      btn.classList.add('bg-[#2C2C2C]', 'text-white', 'shadow-editorial-4');
+      btn.classList.remove('bg-transparent', 'text-[#111111]');
+      btn.classList.add('bg-[#111111]', 'text-[#f2f2f2]');
 
       productCards.forEach((card) => {
         const cardCat = card.getAttribute('data-category');
@@ -307,28 +311,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (matches.length === 0) {
       searchResults.innerHTML = `
-        <div class="py-12 text-center text-[#2C2C2C]">
-          <p class="font-montserrat font-bold text-lg uppercase">NO EDITORIAL MATCHES FOUND</p>
-          <p class="font-open-sans text-xs uppercase tracking-widest text-slate-500 mt-1">TRY BROWSING ALL CATEGORIES IN CATALOGUE</p>
+        <div class="py-12 text-center text-[#111111]">
+          <p class="font-clash text-lg uppercase">NO CORRESPONDING MANIFEST FOUND</p>
+          <p class="font-satoshi text-xs text-[#838282] mt-1">Refine specification search query or view complete export catalogue.</p>
         </div>
       `;
     } else {
       searchResults.innerHTML = matches
         .map(
           (p) => `
-        <div class="border-2 border-[#2C2C2C] bg-white p-4 flex items-center justify-between gap-4 group">
-          <div class="flex items-center gap-3">
-            <div class="w-12 h-12 bg-[#5DA4C9] border border-[#2C2C2C] shrink-0 overflow-hidden">
-              <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover editorial-img" />
+        <div class="border border-[#111111] bg-white p-4 flex items-center justify-between gap-4 group">
+          <div class="flex items-center gap-3 min-w-0">
+            <div class="w-12 h-12 border border-[#111111] bg-[#f2f2f2] shrink-0 overflow-hidden">
+              <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover swiss-reveal-image" />
             </div>
-            <div>
-              <span class="text-[9px] font-black uppercase text-[#BC2C2C] tracking-widest">${p.category} · ${p.brand}</span>
-              <h4 class="font-montserrat font-black text-sm text-[#2C2C2C]">${p.name}</h4>
-              <span class="text-xs font-bold text-[#2C2C2C] font-mono">${p.price}</span>
+            <div class="min-w-0">
+              <span class="text-[10px] font-mono-swiss text-[#838282] uppercase tracking-wider block mb-0.5">${p.category} // ${p.brand}</span>
+              <h4 class="font-clash text-sm uppercase text-[#111111] truncate mb-0.5">${p.name}</h4>
+              <span class="text-xs font-mono-swiss font-bold text-[#111111]">${p.price}</span>
             </div>
           </div>
-          <button type="button" data-product-id="${p.id}" class="search-add-btn px-4 py-2 border-2 border-[#2C2C2C] bg-[#FCD758] hover:bg-[#2C2C2C] hover:text-white font-montserrat font-black text-xs uppercase tracking-widest transition-colors cursor-pointer">
-            ADD TO MANIFEST
+          <button type="button" data-product-id="${p.id}" class="search-add-btn shrink-0 px-4 py-2 border border-[#111111] bg-[#111111] text-[#f2f2f2] hover:bg-transparent hover:text-[#111111] font-mono-swiss text-xs uppercase tracking-wider transition-all cursor-pointer">
+            + MANIFEST
           </button>
         </div>
       `
@@ -361,10 +365,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Editorial Section Interactive Story Carousel
+  // Swiss Index Interactive Switcher
   const editorialStories = [
     {
-      subtitle: 'ISSUE 04 / DISPATCH 26',
+      subtitle: 'SWISS INDEX 01 // NHAVA SHEVA CORRIDOR',
       headline: 'THE ARCHITECTURAL SOLE',
       tagline: 'VULCANIZED NATURAL RUBBER FUSED WITH HIGH-DENSITY HEAVY CANVAS.',
       watermarkText: 'CRAFT',
@@ -372,7 +376,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cta: 'EXPLORE THE ATELIER'
     },
     {
-      subtitle: 'TRADE LOGISTICS REPORT',
+      subtitle: 'SWISS INDEX 02 // DEEP-SEA LOGISTICS',
       headline: 'DEEPWATER MARITIME RUNNERS',
       tagline: 'DIRECT FREIGHT CORRIDORS LINKING NHAVA SHEVA TERMINALS TO GLOBAL PORTS.',
       watermarkText: 'OCEAN',
@@ -380,7 +384,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cta: 'VIEW LOGISTICS MANIFEST'
     },
     {
-      subtitle: 'PURE COMMODITY HARVEST',
+      subtitle: 'SWISS INDEX 03 // TELLICHERRY PURITY',
       headline: 'MALABAR GOLD & CURCUMIN',
       tagline: 'ESTATE GROWN WHOLE SPICES SORTED WITH 99.8% SPECIFICATION PURITY.',
       watermarkText: 'SPICE',
@@ -416,7 +420,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Checkout Button
-  const checkoutNotice = document.getElementById('checkout-notice');
   if (checkoutBtn) {
     checkoutBtn.addEventListener('click', () => {
       if (checkoutNotice) {
