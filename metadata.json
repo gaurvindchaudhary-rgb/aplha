@@ -1,0 +1,6 @@
+{
+  "name": "Alpha Global Traders",
+  "description": "Leading Indian export company connecting quality Indian products—agricultural commodities, spices, textiles, handicrafts, and engineering goods—to B2B buyers worldwide.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

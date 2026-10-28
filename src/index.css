@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    border-radius: 0px !important;
+  }
+
+  body {
+    background-color: #F5F1E3;
+    color: #2C2C2C;
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    line-height: 0.85;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+  }
+}
+
+/* Editorial Typography Helpers */
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-open-sans {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.utility-label {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Grayscale-to-color 500ms transition */
+.editorial-img {
+  filter: grayscale(100%);
+  transition: filter 500ms ease-in-out, transform 500ms ease-in-out;
+}
+
+.group:hover .editorial-img,
+.editorial-img:hover {
+  filter: grayscale(0%);
+}
+
+/* Solid Editorial Block Shadows (Zero soft blur, strict 90-degree corners) */
+.shadow-editorial-20 {
+  box-shadow: 20px 20px 0px #2C2C2C;
+}
+
+.shadow-editorial-16 {
+  box-shadow: 16px 16px 0px #2C2C2C;
+}
+
+.shadow-editorial-12 {
+  box-shadow: 12px 12px 0px #2C2C2C;
+}
+
+.shadow-editorial-8 {
+  box-shadow: 8px 8px 0px #2C2C2C;
+}
+
+.shadow-editorial-4 {
+  box-shadow: 4px 4px 0px #2C2C2C;
+}
+
+.shadow-editorial-yellow {
+  box-shadow: 16px 16px 0px #FCD758;
+}
+
+.shadow-editorial-blue {
+  box-shadow: 16px 16px 0px #5DA4C9;
+}
+
+/* Linear Infinite Horizontal Ticker (40s linear scroll) */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-linear {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 40s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-linear:hover {
+  animation-play-state: paused;
+}
+
+/* Custom crisp solid scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F1E3;
+  border-left: 2px solid #2C2C2C;
+}
+::-webkit-scrollbar-thumb {
+  background: #BC2C2C;
+  border: 2px solid #2C2C2C;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2C2C2C;
+}

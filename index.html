@@ -1,0 +1,1144 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
+    <title>Alpha Global Traders</title>
+    <meta name="description" content="Leading Indian export company connecting quality Indian products—agricultural commodities, spices, textiles, handicrafts, and engineering goods—to B2B buyers worldwide." />
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Alpha Global Traders" />
+    <meta property="og:description" content="Leading Indian export company connecting quality Indian products—agricultural commodities, spices, textiles, handicrafts, and engineering goods—to B2B buyers worldwide." />
+    <meta property="og:site_name" content="Alphaa Global Traders" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Alpha Global Traders" />
+    <meta name="twitter:description" content="Reliable export of quality Indian products to global buyers across 38+ countries." />
+
+    <!-- Google Fonts: Montserrat (700, 800, 900) & Open Sans (400, 600, 700) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,800&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+  <body class="bg-[#F5F1E3] text-[#2C2C2C] antialiased selection:bg-[#FCD758] selection:text-[#2C2C2C]">
+
+    <!-- ====================================================================
+         SECTION 1: STICKY NAVIGATION BAR (Retro Red #BC2C2C)
+         ==================================================================== -->
+    <header class="sticky top-0 z-40 bg-[#BC2C2C] border-b-2 border-[#2C2C2C] text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between">
+        
+        <!-- Left: Logo in Montserrat Black -->
+        <a href="#" class="flex items-center gap-3 group focus:outline-hidden">
+          <div class="bg-[#2C2C2C] text-[#FCD758] px-3 py-1 font-montserrat font-black text-xl tracking-tighter border-2 border-[#2C2C2C] group-hover:bg-white group-hover:text-[#BC2C2C] transition-colors">
+            AGT
+          </div>
+          <div class="flex flex-col">
+            <span class="font-montserrat font-black text-xl sm:text-2xl tracking-tighter leading-none uppercase text-white">
+              ALPHAA
+            </span>
+            <span class="text-[9px] font-black uppercase tracking-[0.2em] text-[#FCD758] leading-tight">
+              GLOBAL TRADERS · EST. 1974
+            </span>
+          </div>
+        </a>
+
+        <!-- Middle: Nav Links (10px uppercase tracking-widest) -->
+        <nav class="hidden md:flex items-center gap-6 text-[10px] font-black uppercase tracking-[0.15em] text-white">
+          <a href="#products" class="hover:text-[#FCD758] transition-colors py-2 border-b-2 border-transparent hover:border-[#FCD758]">CATALOGUE</a>
+          <a href="#editorial" class="hover:text-[#FCD758] transition-colors py-2 border-b-2 border-transparent hover:border-[#FCD758]">EDITORIAL</a>
+          <a href="#process" class="hover:text-[#FCD758] transition-colors py-2 border-b-2 border-transparent hover:border-[#FCD758]">HOW WE EXPORT</a>
+          <a href="#contact" class="hover:text-[#FCD758] transition-colors py-2 border-b-2 border-transparent hover:border-[#FCD758]">TRADE DESK</a>
+        </nav>
+
+        <!-- Right: Search & Cart Action Icons -->
+        <div class="flex items-center gap-4">
+          <!-- Search Button -->
+          <button
+            type="button"
+            id="search-toggle-btn"
+            class="w-10 h-10 border-2 border-[#2C2C2C] bg-white text-[#2C2C2C] flex items-center justify-center hover:bg-[#FCD758] transition-colors cursor-pointer"
+            aria-label="Search export catalogue"
+          >
+            <svg class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="square" stroke-linejoin="miter" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+          </button>
+
+          <!-- Cart Button with Spec Badge -->
+          <button
+            type="button"
+            id="cart-toggle-btn"
+            class="relative w-10 h-10 border-2 border-[#2C2C2C] bg-white text-[#2C2C2C] flex items-center justify-center hover:bg-[#FCD758] transition-colors cursor-pointer"
+            aria-label="View Order Manifest Cart"
+          >
+            <svg class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="square" stroke-linejoin="miter" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+            </svg>
+            <!-- Badge: white circle, #BC2C2C text, font-size: 8px -->
+            <span
+              id="cart-badge"
+              class="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-white text-[#BC2C2C] text-[8px] font-black border border-[#2C2C2C] flex items-center justify-center leading-none shadow-xs"
+            >
+              2
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ====================================================================
+         SECTION 2: HERO SECTION (Full-bleed #BC2C2C, Watermark STRIDE, 9xl)
+         ==================================================================== -->
+    <section class="relative bg-[#BC2C2C] text-white overflow-hidden border-b-2 border-[#2C2C2C] min-h-[82vh] flex items-center">
+      <!-- Massive Background Watermark 'STRIDE' at 25vw, opacity: 0.08, right-aligned -->
+      <div
+        aria-hidden="true"
+        class="absolute right-[-4vw] top-1/2 -translate-y-1/2 font-montserrat font-black text-[25vw] leading-none text-white opacity-[0.08] select-none pointer-events-none tracking-tighter"
+      >
+        STRIDE
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative z-10 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Left Column (7 cols): Editorial Typography -->
+          <div class="lg:col-span-7 flex flex-col items-start">
+            <!-- Utility Label -->
+            <div class="inline-flex items-center gap-2 bg-[#2C2C2C] text-[#FCD758] px-3 py-1 mb-6 border-2 border-white/20">
+              <span class="w-2 h-2 bg-[#FCD758]"></span>
+              <span class="font-open-sans text-[10px] font-black uppercase tracking-[0.1em]">
+                VOL. 74 // MARITIME EXPORT DISPATCH
+              </span>
+            </div>
+
+            <!-- Main Headline: Montserrat 9xl, uppercase, line-height 0.85, letter-spacing -0.05em -->
+            <h1 class="font-montserrat font-black text-5xl sm:text-7xl md:text-8xl lg:text-9xl uppercase tracking-[-0.05em] leading-[0.85] text-white mb-6">
+              CONNECTING<br />
+              INDIA TO<br />
+              THE WORLD
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="font-open-sans text-base sm:text-lg font-normal text-white/95 max-w-xl leading-[1.6] mb-8">
+              Certified export shipments of genuine Indian commodities, organic textiles, Tellicherry spices, carved rosewood, and ISO-tested engineering valves shipped from Mundra and Nhava Sheva.
+            </p>
+
+            <!-- Buttons & Manifest Tags -->
+            <div class="flex flex-wrap items-center gap-4">
+              <!-- CTA Button: black background, white text, 12px font, uppercase, tracking-widest -->
+              <a
+                href="#products"
+                class="px-8 py-4 bg-[#2C2C2C] text-white text-[12px] font-black uppercase tracking-widest border-2 border-[#2C2C2C] hover:bg-[#FCD758] hover:text-[#2C2C2C] transition-colors inline-flex items-center gap-3 cursor-pointer shadow-editorial-8"
+              >
+                <span>EXPLORE CATALOGUE</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="square" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+              </a>
+
+              <a
+                href="#contact"
+                class="px-6 py-4 bg-transparent text-white text-[12px] font-black uppercase tracking-widest border-2 border-white hover:bg-white hover:text-[#BC2C2C] transition-colors inline-flex items-center cursor-pointer"
+              >
+                REQUEST PROFORMA
+              </a>
+            </div>
+
+            <!-- Bullet Metadata Strip -->
+            <div class="mt-10 pt-6 border-t border-white/20 grid grid-cols-3 gap-6 w-full max-w-lg">
+              <div>
+                <span class="block text-[9px] font-black uppercase tracking-widest text-[#FCD758]">CONTAINERS</span>
+                <span class="font-montserrat font-black text-2xl text-white">4,850+</span>
+              </div>
+              <div>
+                <span class="block text-[9px] font-black uppercase tracking-widest text-[#FCD758]">GLOBAL DESTINATIONS</span>
+                <span class="font-montserrat font-black text-2xl text-white">38 PORTS</span>
+              </div>
+              <div>
+                <span class="block text-[9px] font-black uppercase tracking-widest text-[#FCD758]">SPEC VERIFICATION</span>
+                <span class="font-montserrat font-black text-2xl text-white">100% LAB</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column (5 cols): Hero Image in #5DA4C9 container with solid #2C2C2C 16px offset border -->
+          <div class="lg:col-span-5 flex justify-center lg:justify-end">
+            <div class="relative w-full max-w-md group">
+              <!-- #5DA4C9 container with solid #2C2C2C offset border (16px translate-x/y) -->
+              <div class="bg-[#5DA4C9] p-4 border-2 border-[#2C2C2C] shadow-editorial-16 transition-transform">
+                <div class="relative aspect-4/5 w-full overflow-hidden border-2 border-[#2C2C2C] bg-white">
+                  <!-- Grayscale image with 500ms ease-in-out transition to full color on hover -->
+                  <img
+                    src="/src/assets/images/hero_cargo_ship_1792511625875.jpg"
+                    alt="Maritime Container Ship at Mumbai Port"
+                    class="w-full h-full object-cover editorial-img"
+                  />
+                  <!-- Floating Badge -->
+                  <div class="absolute bottom-4 left-4 bg-[#FCD758] text-[#2C2C2C] border-2 border-[#2C2C2C] px-3 py-1 font-montserrat font-black text-[10px] uppercase tracking-widest shadow-editorial-4">
+                    DEEP-SEA BERTH 09 // READY
+                  </div>
+                </div>
+
+                <div class="mt-3 flex items-center justify-between text-[#2C2C2C]">
+                  <span class="font-open-sans text-[10px] font-black uppercase tracking-widest">
+                    FIG. 01 — FREIGHT TERMINAL
+                  </span>
+                  <span class="font-mono text-xs font-bold">NHAVA SHEVA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 3: BRAND TICKER (Infinite horizontal marquee, #5DA4C9)
+         ==================================================================== -->
+    <div class="bg-[#5DA4C9] border-t-2 border-b-2 border-[#2C2C2C] overflow-hidden py-3">
+      <div class="animate-marquee-linear flex items-center whitespace-nowrap text-white font-montserrat text-[18px] uppercase font-bold tracking-[0.2em]">
+        <span class="mx-6">★ ALPHAA GLOBAL TRADERS</span>
+        <span class="mx-6">★ MALABAR WHOLE SPICES</span>
+        <span class="mx-6">★ COMBED RAW TEXTILES</span>
+        <span class="mx-6">★ ANSI CLASS FLANGE VALVES</span>
+        <span class="mx-6">★ AGED BASMATI COMMODITIES</span>
+        <span class="mx-6">★ DIRECT MARITIME CORRIDOR</span>
+        <span class="mx-6">★ CARVED ROSEWOOD HANDICRAFTS</span>
+        <span class="mx-6">★ 38 DESTINATION PORTS</span>
+        <span class="mx-6">★ ESTABLISHED 1974</span>
+        <!-- Repeated segment for seamless linear scroll -->
+        <span class="mx-6">★ ALPHAA GLOBAL TRADERS</span>
+        <span class="mx-6">★ MALABAR WHOLE SPICES</span>
+        <span class="mx-6">★ COMBED RAW TEXTILES</span>
+        <span class="mx-6">★ ANSI CLASS FLANGE VALVES</span>
+        <span class="mx-6">★ AGED BASMATI COMMODITIES</span>
+        <span class="mx-6">★ DIRECT MARITIME CORRIDOR</span>
+        <span class="mx-6">★ CARVED ROSEWOOD HANDICRAFTS</span>
+        <span class="mx-6">★ 38 DESTINATION PORTS</span>
+        <span class="mx-6">★ ESTABLISHED 1974</span>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         SECTION 4: PRODUCT GRID (Background: #F5F1E3, 4 Columns)
+         ==================================================================== -->
+    <section id="products" class="bg-[#F5F1E3] py-20 px-4 sm:px-6 lg:px-8 border-b-2 border-[#2C2C2C]">
+      <div class="max-w-7xl mx-auto">
+        
+        <!-- Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div>
+            <div class="utility-label text-[#BC2C2C] mb-2">
+              CATALOGUE OF EXPORT SHIPMENTS // 2026 CYCLE
+            </div>
+            <h2 class="font-montserrat font-black text-4xl sm:text-5xl uppercase leading-[0.85] text-[#2C2C2C]">
+              OUR EXPORT PRODUCTS
+            </h2>
+          </div>
+
+          <!-- Category filter buttons -->
+          <div class="flex flex-wrap gap-2">
+            <button
+              type="button"
+              data-category="ALL"
+              class="filter-btn px-4 py-2 text-[10px] font-black uppercase tracking-widest border-2 border-[#2C2C2C] bg-[#2C2C2C] text-white shadow-editorial-4 transition-colors cursor-pointer"
+            >
+              ALL
+            </button>
+            <button
+              type="button"
+              data-category="FOOTWEAR"
+              class="filter-btn px-4 py-2 text-[10px] font-black uppercase tracking-widest border-2 border-[#2C2C2C] bg-white text-[#2C2C2C] hover:bg-[#FCD758] transition-colors cursor-pointer"
+            >
+              FOOTWEAR
+            </button>
+            <button
+              type="button"
+              data-category="TEXTILES"
+              class="filter-btn px-4 py-2 text-[10px] font-black uppercase tracking-widest border-2 border-[#2C2C2C] bg-white text-[#2C2C2C] hover:bg-[#FCD758] transition-colors cursor-pointer"
+            >
+              TEXTILES
+            </button>
+            <button
+              type="button"
+              data-category="SPICES"
+              class="filter-btn px-4 py-2 text-[10px] font-black uppercase tracking-widest border-2 border-[#2C2C2C] bg-white text-[#2C2C2C] hover:bg-[#FCD758] transition-colors cursor-pointer"
+            >
+              SPICES
+            </button>
+            <button
+              type="button"
+              data-category="COMMODITIES"
+              class="filter-btn px-4 py-2 text-[10px] font-black uppercase tracking-widest border-2 border-[#2C2C2C] bg-white text-[#2C2C2C] hover:bg-[#FCD758] transition-colors cursor-pointer"
+            >
+              COMMODITIES
+            </button>
+            <button
+              type="button"
+              data-category="ENGINEERING"
+              class="filter-btn px-4 py-2 text-[10px] font-black uppercase tracking-widest border-2 border-[#2C2C2C] bg-white text-[#2C2C2C] hover:bg-[#FCD758] transition-colors cursor-pointer"
+            >
+              ENGINEERING
+            </button>
+          </div>
+        </div>
+
+        <!-- 4-Column Card Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Card 1: Stride Derby 1974 -->
+          <div
+            data-category="FOOTWEAR"
+            class="product-card bg-white border-2 border-[#2C2C2C] flex flex-col justify-between group hover:shadow-editorial-8 transition-shadow"
+          >
+            <div>
+              <div class="p-3 bg-[#F5F1E3] border-b-2 border-[#2C2C2C]">
+                <!-- Grayscale image that turns to color on hover -->
+                <div class="aspect-square bg-[#5DA4C9] overflow-hidden border border-[#2C2C2C]">
+                  <img
+                    src="/src/assets/images/product_indian_textiles_1792511627399.jpg"
+                    alt="Stride Classic Derby 1974"
+                    class="w-full h-full object-cover editorial-img"
+                  />
+                </div>
+              </div>
+
+              <!-- Metadata -->
+              <div class="p-4">
+                <!-- Top row: brand (10px gray uppercase) and price (10px bold) -->
+                <div class="flex items-center justify-between text-[10px] uppercase font-bold mb-1">
+                  <span class="text-slate-500 tracking-widest">STRIDE GOODS</span>
+                  <span class="font-mono text-[#BC2C2C] font-black">$185.00</span>
+                </div>
+
+                <!-- Bottom row: product name (14px black uppercase) -->
+                <h3 class="font-montserrat font-black text-sm uppercase text-[#2C2C2C] leading-snug mb-2">
+                  STRIDE CLASSIC DERBY 1974
+                </h3>
+
+                <p class="font-open-sans text-xs text-slate-600 line-clamp-2 leading-relaxed mb-3">
+                  Full-grain oiled pull-up leather upper, storm welt construction, solid brass eyelets.
+                </p>
+
+                <div class="inline-block bg-[#F5F1E3] border border-[#2C2C2C] px-2 py-0.5 text-[9px] font-black uppercase text-[#2C2C2C]">
+                  ASTM-F2413 / ISO 20345
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Action Button -->
+            <div class="p-4 pt-0">
+              <button
+                type="button"
+                data-product-id="prod-1"
+                class="add-to-cart-btn w-full py-2.5 bg-[#2C2C2C] text-white text-[10px] font-black uppercase tracking-widest hover:bg-[#FCD758] hover:text-[#2C2C2C] border-2 border-[#2C2C2C] transition-colors cursor-pointer"
+              >
+                ADD TO MANIFEST
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2: Malabar Black Pepper Bold -->
+          <div
+            data-category="SPICES"
+            class="product-card bg-white border-2 border-[#2C2C2C] flex flex-col justify-between group hover:shadow-editorial-8 transition-shadow"
+          >
+            <div>
+              <div class="p-3 bg-[#F5F1E3] border-b-2 border-[#2C2C2C]">
+                <div class="aspect-square bg-[#5DA4C9] overflow-hidden border border-[#2C2C2C]">
+                  <img
+                    src="/src/assets/images/product_indian_spices_1792511627303.jpg"
+                    alt="Malabar Black Pepper Bold"
+                    class="w-full h-full object-cover editorial-img"
+                  />
+                </div>
+              </div>
+
+              <div class="p-4">
+                <div class="flex items-center justify-between text-[10px] uppercase font-bold mb-1">
+                  <span class="text-slate-500 tracking-widest">ALPHAA SPICE CO</span>
+                  <span class="font-mono text-[#BC2C2C] font-black">$6,450.00 / MT</span>
+                </div>
+
+                <h3 class="font-montserrat font-black text-sm uppercase text-[#2C2C2C] leading-snug mb-2">
+                  MALABAR BLACK PEPPER BOLD 550GL
+                </h3>
+
+                <p class="font-open-sans text-xs text-slate-600 line-clamp-2 leading-relaxed mb-3">
+                  Sun-cured Tellicherry whole black peppercorns, steam sterilized, piperine 5.8% min.
+                </p>
+
+                <div class="inline-block bg-[#F5F1E3] border border-[#2C2C2C] px-2 py-0.5 text-[9px] font-black uppercase text-[#2C2C2C]">
+                  ASTA / ESA QUALITY
+                </div>
+              </div>
+            </div>
+
+            <div class="p-4 pt-0">
+              <button
+                type="button"
+                data-product-id="prod-2"
+                class="add-to-cart-btn w-full py-2.5 bg-[#2C2C2C] text-white text-[10px] font-black uppercase tracking-widest hover:bg-[#FCD758] hover:text-[#2C2C2C] border-2 border-[#2C2C2C] transition-colors cursor-pointer"
+              >
+                ADD TO MANIFEST
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3: Vintage Runner Low-Top Chop -->
+          <div
+            data-category="FOOTWEAR"
+            class="product-card bg-white border-2 border-[#2C2C2C] flex flex-col justify-between group hover:shadow-editorial-8 transition-shadow"
+          >
+            <div>
+              <div class="p-3 bg-[#F5F1E3] border-b-2 border-[#2C2C2C]">
+                <div class="aspect-square bg-[#5DA4C9] overflow-hidden border border-[#2C2C2C]">
+                  <img
+                    src="/src/assets/images/product_indian_textiles_1792511627399.jpg"
+                    alt="Vintage Runner Low-Top Chop"
+                    class="w-full h-full object-cover editorial-img"
+                  />
+                </div>
+              </div>
+
+              <div class="p-4">
+                <div class="flex items-center justify-between text-[10px] uppercase font-bold mb-1">
+                  <span class="text-slate-500 tracking-widest">STRIDE ATELIER</span>
+                  <span class="font-mono text-[#BC2C2C] font-black">$140.00</span>
+                </div>
+
+                <h3 class="font-montserrat font-black text-sm uppercase text-[#2C2C2C] leading-snug mb-2">
+                  VINTAGE RUNNER LOW-TOP CHOP
+                </h3>
+
+                <p class="font-open-sans text-xs text-slate-600 line-clamp-2 leading-relaxed mb-3">
+                  Hand-dyed organic canvas, vulcanized natural gum rubber sole, archival 1977 silhouette.
+                </p>
+
+                <div class="inline-block bg-[#F5F1E3] border border-[#2C2C2C] px-2 py-0.5 text-[9px] font-black uppercase text-[#2C2C2C]">
+                  OEKO-TEX 100 CERT
+                </div>
+              </div>
+            </div>
+
+            <div class="p-4 pt-0">
+              <button
+                type="button"
+                data-product-id="prod-3"
+                class="add-to-cart-btn w-full py-2.5 bg-[#2C2C2C] text-white text-[10px] font-black uppercase tracking-widest hover:bg-[#FCD758] hover:text-[#2C2C2C] border-2 border-[#2C2C2C] transition-colors cursor-pointer"
+              >
+                ADD TO MANIFEST
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 4: GOTS Organic Combed Cotton -->
+          <div
+            data-category="TEXTILES"
+            class="product-card bg-white border-2 border-[#2C2C2C] flex flex-col justify-between group hover:shadow-editorial-8 transition-shadow"
+          >
+            <div>
+              <div class="p-3 bg-[#F5F1E3] border-b-2 border-[#2C2C2C]">
+                <div class="aspect-square bg-[#5DA4C9] overflow-hidden border border-[#2C2C2C]">
+                  <img
+                    src="/src/assets/images/product_indian_textiles_1792511627399.jpg"
+                    alt="GOTS Organic Combed Cotton"
+                    class="w-full h-full object-cover editorial-img"
+                  />
+                </div>
+              </div>
+
+              <div class="p-4">
+                <div class="flex items-center justify-between text-[10px] uppercase font-bold mb-1">
+                  <span class="text-slate-500 tracking-widest">MILL DEPT.</span>
+                  <span class="font-mono text-[#BC2C2C] font-black">$4.80 / M</span>
+                </div>
+
+                <h3 class="font-montserrat font-black text-sm uppercase text-[#2C2C2C] leading-snug mb-2">
+                  GOTS ORGANIC COMBED COTTON 40S
+                </h3>
+
+                <p class="font-open-sans text-xs text-slate-600 line-clamp-2 leading-relaxed mb-3">
+                  High-density combed long-staple Indian cotton twill, mercerized raw ecru finish.
+                </p>
+
+                <div class="inline-block bg-[#F5F1E3] border border-[#2C2C2C] px-2 py-0.5 text-[9px] font-black uppercase text-[#2C2C2C]">
+                  GOTS VERSION 7.0
+                </div>
+              </div>
+            </div>
+
+            <div class="p-4 pt-0">
+              <button
+                type="button"
+                data-product-id="prod-4"
+                class="add-to-cart-btn w-full py-2.5 bg-[#2C2C2C] text-white text-[10px] font-black uppercase tracking-widest hover:bg-[#FCD758] hover:text-[#2C2C2C] border-2 border-[#2C2C2C] transition-colors cursor-pointer"
+              >
+                ADD TO MANIFEST
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 5: Solid Sheesham Carved Commode Box -->
+          <div
+            data-category="COMMODITIES"
+            class="product-card bg-white border-2 border-[#2C2C2C] flex flex-col justify-between group hover:shadow-editorial-8 transition-shadow"
+          >
+            <div>
+              <div class="p-3 bg-[#F5F1E3] border-b-2 border-[#2C2C2C]">
+                <div class="aspect-square bg-[#5DA4C9] overflow-hidden border border-[#2C2C2C]">
+                  <img
+                    src="/src/assets/images/product_indian_handicrafts_1792511628636.jpg"
+                    alt="Solid Sheesham Carved Commode Box"
+                    class="w-full h-full object-cover editorial-img"
+                  />
+                </div>
+              </div>
+
+              <div class="p-4">
+                <div class="flex items-center justify-between text-[10px] uppercase font-bold mb-1">
+                  <span class="text-slate-500 tracking-widest">HERITAGE GUILD</span>
+                  <span class="font-mono text-[#BC2C2C] font-black">$38.50</span>
+                </div>
+
+                <h3 class="font-montserrat font-black text-sm uppercase text-[#2C2C2C] leading-snug mb-2">
+                  SOLID SHEESHAM CARVED COMMODE BOX
+                </h3>
+
+                <p class="font-open-sans text-xs text-slate-600 line-clamp-2 leading-relaxed mb-3">
+                  Kiln-dried seasoned Indian rosewood with antiqued brass latch fittings and hand-jointing.
+                </p>
+
+                <div class="inline-block bg-[#F5F1E3] border border-[#2C2C2C] px-2 py-0.5 text-[9px] font-black uppercase text-[#2C2C2C]">
+                  ISPM-15 FUMIGATED
+                </div>
+              </div>
+            </div>
+
+            <div class="p-4 pt-0">
+              <button
+                type="button"
+                data-product-id="prod-5"
+                class="add-to-cart-btn w-full py-2.5 bg-[#2C2C2C] text-white text-[10px] font-black uppercase tracking-widest hover:bg-[#FCD758] hover:text-[#2C2C2C] border-2 border-[#2C2C2C] transition-colors cursor-pointer"
+              >
+                ADD TO MANIFEST
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 6: Alleppey Green Cardamom 8mm -->
+          <div
+            data-category="SPICES"
+            class="product-card bg-white border-2 border-[#2C2C2C] flex flex-col justify-between group hover:shadow-editorial-8 transition-shadow"
+          >
+            <div>
+              <div class="p-3 bg-[#F5F1E3] border-b-2 border-[#2C2C2C]">
+                <div class="aspect-square bg-[#5DA4C9] overflow-hidden border border-[#2C2C2C]">
+                  <img
+                    src="/src/assets/images/product_indian_spices_1792511627303.jpg"
+                    alt="Alleppey Green Cardamom 8mm"
+                    class="w-full h-full object-cover editorial-img"
+                  />
+                </div>
+              </div>
+
+              <div class="p-4">
+                <div class="flex items-center justify-between text-[10px] uppercase font-bold mb-1">
+                  <span class="text-slate-500 tracking-widest">ALPHAA SPICE CO</span>
+                  <span class="font-mono text-[#BC2C2C] font-black">$28.00 / KG</span>
+                </div>
+
+                <h3 class="font-montserrat font-black text-sm uppercase text-[#2C2C2C] leading-snug mb-2">
+                  ALLEPPEY GREEN CARDAMOM 8MM JUMBO
+                </h3>
+
+                <p class="font-open-sans text-xs text-slate-600 line-clamp-2 leading-relaxed mb-3">
+                  Vibrant green extra-bold 8mm pods with volatile oil content > 7.5%, sortex cleaned.
+                </p>
+
+                <div class="inline-block bg-[#F5F1E3] border border-[#2C2C2C] px-2 py-0.5 text-[9px] font-black uppercase text-[#2C2C2C]">
+                  SPICE BOARD GRADE A+
+                </div>
+              </div>
+            </div>
+
+            <div class="p-4 pt-0">
+              <button
+                type="button"
+                data-product-id="prod-6"
+                class="add-to-cart-btn w-full py-2.5 bg-[#2C2C2C] text-white text-[10px] font-black uppercase tracking-widest hover:bg-[#FCD758] hover:text-[#2C2C2C] border-2 border-[#2C2C2C] transition-colors cursor-pointer"
+              >
+                ADD TO MANIFEST
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 7: Ductile Iron Flange Valve -->
+          <div
+            data-category="ENGINEERING"
+            class="product-card bg-white border-2 border-[#2C2C2C] flex flex-col justify-between group hover:shadow-editorial-8 transition-shadow"
+          >
+            <div>
+              <div class="p-3 bg-[#F5F1E3] border-b-2 border-[#2C2C2C]">
+                <div class="aspect-square bg-[#5DA4C9] overflow-hidden border border-[#2C2C2C]">
+                  <img
+                    src="/src/assets/images/logistics_container_port_1792511627971.jpg"
+                    alt="Ductile Iron Flange Valve Fittings"
+                    class="w-full h-full object-cover editorial-img"
+                  />
+                </div>
+              </div>
+
+              <div class="p-4">
+                <div class="flex items-center justify-between text-[10px] uppercase font-bold mb-1">
+                  <span class="text-slate-500 tracking-widest">PRECISION FOUNDRY</span>
+                  <span class="font-mono text-[#BC2C2C] font-black">$92.00</span>
+                </div>
+
+                <h3 class="font-montserrat font-black text-sm uppercase text-[#2C2C2C] leading-snug mb-2">
+                  DUCTILE IRON FLANGE VALVE FITTINGS
+                </h3>
+
+                <p class="font-open-sans text-xs text-slate-600 line-clamp-2 leading-relaxed mb-3">
+                  Hydrostatically tested ductile iron ANSI Class 150/300 flanged valves with anti-corrosion VCI seal.
+                </p>
+
+                <div class="inline-block bg-[#F5F1E3] border border-[#2C2C2C] px-2 py-0.5 text-[9px] font-black uppercase text-[#2C2C2C]">
+                  ISO 9001 / ASTM A536
+                </div>
+              </div>
+            </div>
+
+            <div class="p-4 pt-0">
+              <button
+                type="button"
+                data-product-id="prod-7"
+                class="add-to-cart-btn w-full py-2.5 bg-[#2C2C2C] text-white text-[10px] font-black uppercase tracking-widest hover:bg-[#FCD758] hover:text-[#2C2C2C] border-2 border-[#2C2C2C] transition-colors cursor-pointer"
+              >
+                ADD TO MANIFEST
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 8: Aged 1121 Basmati Rice Steam -->
+          <div
+            data-category="COMMODITIES"
+            class="product-card bg-white border-2 border-[#2C2C2C] flex flex-col justify-between group hover:shadow-editorial-8 transition-shadow"
+          >
+            <div>
+              <div class="p-3 bg-[#F5F1E3] border-b-2 border-[#2C2C2C]">
+                <div class="aspect-square bg-[#5DA4C9] overflow-hidden border border-[#2C2C2C]">
+                  <img
+                    src="/src/assets/images/product_indian_spices_1792511627303.jpg"
+                    alt="Aged 1121 Basmati Rice"
+                    class="w-full h-full object-cover editorial-img"
+                  />
+                </div>
+              </div>
+
+              <div class="p-4">
+                <div class="flex items-center justify-between text-[10px] uppercase font-bold mb-1">
+                  <span class="text-slate-500 tracking-widest">AGRI GRAIN CO</span>
+                  <span class="font-mono text-[#BC2C2C] font-black">$1,120.00 / MT</span>
+                </div>
+
+                <h3 class="font-montserrat font-black text-sm uppercase text-[#2C2C2C] leading-snug mb-2">
+                  AGED 1121 BASMATI RICE STEAM PARBOIL
+                </h3>
+
+                <p class="font-open-sans text-xs text-slate-600 line-clamp-2 leading-relaxed mb-3">
+                  24-month aged 1121 steam basmati rice, average grain length 8.35mm before cooking.
+                </p>
+
+                <div class="inline-block bg-[#F5F1E3] border border-[#2C2C2C] px-2 py-0.5 text-[9px] font-black uppercase text-[#2C2C2C]">
+                  APEDA VERIFIED EXPORT
+                </div>
+              </div>
+            </div>
+
+            <div class="p-4 pt-0">
+              <button
+                type="button"
+                data-product-id="prod-8"
+                class="add-to-cart-btn w-full py-2.5 bg-[#2C2C2C] text-white text-[10px] font-black uppercase tracking-widest hover:bg-[#FCD758] hover:text-[#2C2C2C] border-2 border-[#2C2C2C] transition-colors cursor-pointer"
+              >
+                ADD TO MANIFEST
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 5: EDITORIAL SECTION (Two-Pane Container, 12px solid #2C2C2C)
+         Left pane: #F5F1E3, 1/3 width, vertical headline & circular arrow button
+         Right pane: White, 2/3 width, 20% opacity grayscale image, 5xl headline, CTA
+         ==================================================================== -->
+    <section id="editorial" class="py-20 px-4 sm:px-6 lg:px-8 bg-[#FCD758] border-b-2 border-[#2C2C2C]">
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="utility-label text-[#2C2C2C] mb-4">
+          DISPATCH EDITORIAL // QUARTERLY REPORT
+        </div>
+
+        <!-- Two-pane container with a 12px solid #2C2C2C border -->
+        <div class="border-[12px] border-[#2C2C2C] shadow-editorial-20 bg-white grid grid-cols-1 lg:grid-cols-12 min-h-[560px]">
+          
+          <!-- Left Pane: #F5F1E3 background, 1/3 width (4 cols), vertical stack of headline and a circular arrow button -->
+          <div class="lg:col-span-4 bg-[#F5F1E3] p-8 sm:p-12 flex flex-col justify-between border-b-4 lg:border-b-0 lg:border-r-4 border-[#2C2C2C]">
+            <div>
+              <span id="editorial-subtitle" class="block font-open-sans text-[10px] font-black uppercase tracking-[0.15em] text-[#BC2C2C] mb-6">
+                ISSUE 04 / DISPATCH 26
+              </span>
+
+              <h3 class="font-montserrat font-black text-3xl sm:text-4xl lg:text-5xl uppercase leading-[0.85] text-[#2C2C2C] mb-4">
+                THE ATELIER ARCHIVE
+              </h3>
+
+              <p class="font-open-sans text-xs uppercase tracking-wider text-slate-600 leading-relaxed">
+                Click the circular dial to rotate through trade dispatches, material provenance records, and deep-sea route manifests.
+              </p>
+            </div>
+
+            <!-- Circular arrow button to switch dispatches -->
+            <div class="pt-8 flex items-center gap-4">
+              <button
+                type="button"
+                id="editorial-next-btn"
+                class="w-16 h-16 rounded-full bg-[#2C2C2C] text-white border-2 border-[#2C2C2C] flex items-center justify-center hover:bg-[#FCD758] hover:text-[#2C2C2C] transition-transform hover:rotate-45 active:scale-95 cursor-pointer shadow-editorial-4"
+                aria-label="Next dispatch story"
+              >
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+              </button>
+              <span class="text-[10px] font-black uppercase tracking-widest text-[#2C2C2C]">NEXT ENTRY</span>
+            </div>
+          </div>
+
+          <!-- Right Pane: White background, 2/3 width (8 cols), 20% opacity grayscale watermark, bottom-left 5xl headline and CTA -->
+          <div class="lg:col-span-8 bg-white relative p-8 sm:p-16 flex flex-col justify-between overflow-hidden">
+            
+            <!-- Centered grayscale image (20% opacity) watermark -->
+            <div class="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none select-none overflow-hidden">
+              <img
+                id="editorial-watermark-img"
+                src="/src/assets/images/hero_cargo_ship_1792511625875.jpg"
+                alt="Editorial Watermark"
+                class="w-full h-full object-cover filter grayscale contrast-125 scale-105"
+              />
+            </div>
+
+            <!-- Massive Background Typography Watermark -->
+            <div
+              id="editorial-watermark-text"
+              aria-hidden="true"
+              class="absolute -top-6 right-4 font-montserrat font-black text-8xl sm:text-9xl text-[#5DA4C9] opacity-25 select-none pointer-events-none tracking-tighter"
+            >
+              CRAFT
+            </div>
+
+            <!-- Top Tag -->
+            <div class="relative z-10">
+              <span class="bg-[#5DA4C9] text-white px-3 py-1 text-[10px] font-black uppercase tracking-widest border border-[#2C2C2C]">
+                VERIFIED ARCHIVE RECORD
+              </span>
+            </div>
+
+            <!-- Bottom-left aligned 5xl headline and black CTA button -->
+            <div class="relative z-10 mt-24">
+              <h2
+                id="editorial-headline"
+                class="font-montserrat font-black text-3xl sm:text-5xl lg:text-6xl uppercase leading-[0.85] text-[#2C2C2C] mb-4 max-w-2xl"
+              >
+                THE ARCHITECTURAL SOLE
+              </h2>
+
+              <p
+                id="editorial-tagline"
+                class="font-open-sans text-xs sm:text-sm font-semibold uppercase tracking-wider text-slate-700 max-w-xl mb-8 leading-relaxed"
+              >
+                VULCANIZED NATURAL RUBBER FUSED WITH HIGH-DENSITY HEAVY CANVAS.
+              </p>
+
+              <!-- Black CTA button: 12px uppercase tracking-widest -->
+              <a
+                id="editorial-cta"
+                href="#products"
+                class="inline-block px-8 py-4 bg-[#2C2C2C] text-white text-[12px] font-black uppercase tracking-widest border-2 border-[#2C2C2C] hover:bg-[#FCD758] hover:text-[#2C2C2C] transition-colors cursor-pointer shadow-editorial-8"
+              >
+                EXPLORE THE ATELIER
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 6: EXPORT PROCESS WORKFLOW (Brutalist Step Cards)
+         ==================================================================== -->
+    <section id="process" class="py-20 px-4 sm:px-6 lg:px-8 bg-[#F5F1E3] border-b-2 border-[#2C2C2C]">
+      <div class="max-w-7xl mx-auto">
+        <div class="utility-label text-[#BC2C2C] mb-2">
+          LOGISTICS PROTOCOL // STANDARD OPERATING TIMELINE
+        </div>
+        <h2 class="font-montserrat font-black text-4xl sm:text-5xl uppercase leading-[0.85] text-[#2C2C2C] mb-12">
+          HOW EXPORTING WORKS
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="border-2 border-[#2C2C2C] bg-white p-6 shadow-editorial-8 flex flex-col justify-between">
+            <div>
+              <div class="font-montserrat font-black text-4xl text-[#BC2C2C] mb-2">01</div>
+              <h4 class="font-montserrat font-black text-base uppercase text-[#2C2C2C] mb-3">ENQUIRY & SPEC</h4>
+              <p class="font-open-sans text-xs text-slate-700 leading-relaxed">
+                Submit product specifications, destination port, incoterms (FOB/CIF), and requested order volume.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#2C2C2C] text-[9px] font-black uppercase text-[#5DA4C9] tracking-widest">
+              STEP CONFIRMATION: 24 HOURS
+            </div>
+          </div>
+
+          <div class="border-2 border-[#2C2C2C] bg-white p-6 shadow-editorial-8 flex flex-col justify-between">
+            <div>
+              <div class="font-montserrat font-black text-4xl text-[#5DA4C9] mb-2">02</div>
+              <h4 class="font-montserrat font-black text-base uppercase text-[#2C2C2C] mb-3">LAB TESTING & LOT</h4>
+              <p class="font-open-sans text-xs text-slate-700 leading-relaxed">
+                Pre-shipment batch inspection, fumigation certification, SGS / Spice Board testing, and barcode packaging.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#2C2C2C] text-[9px] font-black uppercase text-[#5DA4C9] tracking-widest">
+              CERTIFIED SPEC GUARANTEED
+            </div>
+          </div>
+
+          <div class="border-2 border-[#2C2C2C] bg-white p-6 shadow-editorial-8 flex flex-col justify-between">
+            <div>
+              <div class="font-montserrat font-black text-4xl text-[#FCD758] mb-2">03</div>
+              <h4 class="font-montserrat font-black text-base uppercase text-[#2C2C2C] mb-3">PORT CUSTOMS</h4>
+              <p class="font-open-sans text-xs text-slate-700 leading-relaxed">
+                Port gate-in, shipping bill lodgement, EDI clearance, and container stuffing at bonded CFS yards.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#2C2C2C] text-[9px] font-black uppercase text-[#5DA4C9] tracking-widest">
+              DGFT & ICEGATE READY
+            </div>
+          </div>
+
+          <div class="border-2 border-[#2C2C2C] bg-white p-6 shadow-editorial-8 flex flex-col justify-between">
+            <div>
+              <div class="font-montserrat font-black text-4xl text-[#2C2C2C] mb-2">04</div>
+              <h4 class="font-montserrat font-black text-base uppercase text-[#2C2C2C] mb-3">BILL OF LADING</h4>
+              <p class="font-open-sans text-xs text-slate-700 leading-relaxed">
+                Vessel departure, original negotiable BL issued, complete bank documentation dispatched via DHL express.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#2C2C2C] text-[9px] font-black uppercase text-[#5DA4C9] tracking-widest">
+              GLOBAL DELIVERY TRACKED
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 7: TRADE DESK CONTACT & ENQUIRY FORM
+         ==================================================================== -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-white border-b-2 border-[#2C2C2C]">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <div class="lg:col-span-5">
+            <div class="utility-label text-[#BC2C2C] mb-2">
+              EXPORT CONSULTATION & PROFORMA DESK
+            </div>
+            <h2 class="font-montserrat font-black text-4xl sm:text-5xl uppercase leading-[0.85] text-[#2C2C2C] mb-6">
+              LET'S TALK TRADE
+            </h2>
+            <p class="font-open-sans text-sm text-slate-700 leading-relaxed mb-8">
+              Reach out directly to our merchant export desk for quotation requests, container load inquiries, custom private label branding, and samples.
+            </p>
+
+            <div class="space-y-4 font-open-sans text-xs">
+              <div class="border-2 border-[#2C2C2C] bg-[#F5F1E3] p-4">
+                <span class="block utility-label text-[#BC2C2C] mb-1">HEADQUARTERS</span>
+                <p class="font-bold text-[#2C2C2C] uppercase">ALPHAA GLOBAL TRADERS PVT. LTD.</p>
+                <p class="text-slate-600">Export Towers, Plot 42, Nariman Point, Mumbai 400021, India</p>
+              </div>
+
+              <div class="border-2 border-[#2C2C2C] bg-[#F5F1E3] p-4">
+                <span class="block utility-label text-[#5DA4C9] mb-1">TRADE CONTACT</span>
+                <p class="font-bold text-[#2C2C2C]">trade@alphaaglobal.com · ops@alphaaglobal.com</p>
+                <p class="text-slate-600">+91 (22) 6890-4400 · WhatsApp: +91 98200 12345</p>
+              </div>
+
+              <div class="border-2 border-[#2C2C2C] bg-[#F5F1E3] p-4">
+                <span class="block utility-label text-[#FCD758] mb-1">EXIM CREDENTIALS</span>
+                <p class="font-bold text-[#2C2C2C] uppercase">IEC: 0308029141 · APEDA · FIEO · SPICE BOARD</p>
+                <p class="text-slate-600">ISO 9001:2015 Quality Management Certified</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="lg:col-span-7">
+            <div class="border-4 border-[#2C2C2C] bg-[#F5F1E3] p-6 sm:p-10 shadow-editorial-16">
+              <h3 class="font-montserrat font-black text-2xl uppercase leading-none text-[#2C2C2C] mb-6">
+                QUOTATION & INVOICE REQUEST
+              </h3>
+
+              <form onsubmit="event.preventDefault(); document.getElementById('form-success-banner').classList.remove('hidden'); this.reset();" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block utility-label text-[#2C2C2C] mb-1">FULL NAME *</label>
+                    <input type="text" required placeholder="E.G. ARTHUR STERLING" class="w-full bg-white border-2 border-[#2C2C2C] p-3 text-xs font-mono font-bold focus:outline-hidden focus:bg-[#FCD758]/20" />
+                  </div>
+                  <div>
+                    <label class="block utility-label text-[#2C2C2C] mb-1">COMPANY NAME *</label>
+                    <input type="text" required placeholder="E.G. NORDIC IMPORTS OY" class="w-full bg-white border-2 border-[#2C2C2C] p-3 text-xs font-mono font-bold focus:outline-hidden focus:bg-[#FCD758]/20" />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block utility-label text-[#2C2C2C] mb-1">CORPORATE EMAIL *</label>
+                    <input type="email" required placeholder="ARTHUR@NORDICIMPORTS.COM" class="w-full bg-white border-2 border-[#2C2C2C] p-3 text-xs font-mono font-bold focus:outline-hidden focus:bg-[#FCD758]/20" />
+                  </div>
+                  <div>
+                    <label class="block utility-label text-[#2C2C2C] mb-1">DESTINATION PORT / COUNTRY *</label>
+                    <input type="text" required placeholder="ROTTERDAM, NETHERLANDS" class="w-full bg-white border-2 border-[#2C2C2C] p-3 text-xs font-mono font-bold focus:outline-hidden focus:bg-[#FCD758]/20" />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block utility-label text-[#2C2C2C] mb-1">CATEGORY OF INTEREST</label>
+                    <select class="w-full bg-white border-2 border-[#2C2C2C] p-3 text-xs font-mono font-bold focus:outline-hidden">
+                      <option>SPICES & CONDIMENTS (TELLICHERRY/CARDAMOM)</option>
+                      <option>ORGANIC TEXTILES & APPAREL FABRICS</option>
+                      <option>FOOTWEAR & ATELIER RETRO RUNNERS</option>
+                      <option>AGRICULTURAL GRAINS & STEAM BASMATI</option>
+                      <option>ENGINEERING VALVES & INDUSTRIAL CASTINGS</option>
+                      <option>HANDICRAFTS & SEASONED ROSEWOOD</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block utility-label text-[#2C2C2C] mb-1">PROJECTED VOLUME</label>
+                    <input type="text" placeholder="E.G. 1 X 20FT FCL OR 5 METRIC TONS" class="w-full bg-white border-2 border-[#2C2C2C] p-3 text-xs font-mono font-bold focus:outline-hidden focus:bg-[#FCD758]/20" />
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block utility-label text-[#2C2C2C] mb-1">SPECIFICATIONS & ORDER NOTES</label>
+                  <textarea rows="4" placeholder="PLEASE DETAIL TESTING CERTIFICATES, INCOTERMS (FOB/CIF), AND SHIPMENT TARGET WINDOW..." class="w-full bg-white border-2 border-[#2C2C2C] p-3 text-xs font-mono font-bold focus:outline-hidden focus:bg-[#FCD758]/20"></textarea>
+                </div>
+
+                <div id="form-success-banner" class="hidden bg-[#FCD758] border-2 border-[#2C2C2C] p-4 text-[#2C2C2C]">
+                  <p class="font-montserrat font-black text-sm uppercase">TRANSMISSION CONFIRMED</p>
+                  <p class="font-open-sans text-xs uppercase tracking-wider">OUR EXPORT TRADE DESK WILL TRANSMIT FORMAL PROFORMA QUOTE WITHIN 12 HOURS.</p>
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full py-4 bg-[#2C2C2C] text-white font-montserrat font-black text-xs uppercase tracking-widest hover:bg-[#BC2C2C] transition-colors border-2 border-[#2C2C2C] cursor-pointer"
+                >
+                  TRANSMIT SPECIFICATION TO TRADE DESK
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 8: FOOTER (#2C2C2C Background, 2 Columns, 7xl Brand)
+         ==================================================================== -->
+    <footer class="bg-[#2C2C2C] text-white pt-16 pb-8 border-t-4 border-[#2C2C2C]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Two-column layout: left column contains 7xl brand name and social links; right has 3-column sub-grid with Sunny Yellow (#FCD758) 10px uppercase labels -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16">
+          
+          <!-- Left Column (5 cols): 7xl Brand Name & Social Links -->
+          <div class="lg:col-span-5 flex flex-col justify-between">
+            <div>
+              <h2 class="font-montserrat font-black text-5xl sm:text-6xl lg:text-7xl uppercase leading-[0.85] text-white tracking-tighter mb-4">
+                ALPHAA
+              </h2>
+              <p class="font-open-sans text-xs uppercase tracking-widest text-slate-400 max-w-sm mb-6 leading-relaxed">
+                MERCHANT EXPORTER OF RECORD · INDIA TO THE WORLD. SPECIALIZING IN ARCHIVAL GOODS, RAW COMMODITIES, AND CERTIFIED INDUSTRIAL EXPORTS.
+              </p>
+            </div>
+
+            <!-- Social Links in Montserrat with Yellow Accents -->
+            <div class="flex items-center gap-4 text-xs font-montserrat font-black uppercase tracking-widest">
+              <a href="#" class="px-3 py-1.5 border border-white/20 text-white hover:bg-[#FCD758] hover:text-[#2C2C2C] hover:border-[#FCD758] transition-colors">LN</a>
+              <a href="#" class="px-3 py-1.5 border border-white/20 text-white hover:bg-[#FCD758] hover:text-[#2C2C2C] hover:border-[#FCD758] transition-colors">TW</a>
+              <a href="#" class="px-3 py-1.5 border border-white/20 text-white hover:bg-[#FCD758] hover:text-[#2C2C2C] hover:border-[#FCD758] transition-colors">IG</a>
+              <a href="#" class="px-3 py-1.5 border border-white/20 text-white hover:bg-[#FCD758] hover:text-[#2C2C2C] hover:border-[#FCD758] transition-colors">YT</a>
+            </div>
+          </div>
+
+          <!-- Right Column (7 cols): 3-column sub-grid with section labels in Sunny Yellow (#FCD758) 10px uppercase -->
+          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-8">
+            
+            <!-- Col 1 -->
+            <div>
+              <span class="block text-[#FCD758] text-[10px] font-black uppercase tracking-[0.1em] mb-4">
+                EXPORT DIVISIONS
+              </span>
+              <ul class="space-y-2.5 text-xs text-slate-300 font-open-sans uppercase tracking-wider font-semibold">
+                <li><a href="#products" class="hover:text-white transition-colors">SPICES & ESSENCES</a></li>
+                <li><a href="#products" class="hover:text-white transition-colors">ORGANIC TEXTILES</a></li>
+                <li><a href="#products" class="hover:text-white transition-colors">FOOTWEAR & LEATHER</a></li>
+                <li><a href="#products" class="hover:text-white transition-colors">ENGINEERING VALVES</a></li>
+                <li><a href="#products" class="hover:text-white transition-colors">STEAM BASMATI RICE</a></li>
+                <li><a href="#products" class="hover:text-white transition-colors">INDIAN ROSEWOOD</a></li>
+              </ul>
+            </div>
+
+            <!-- Col 2 -->
+            <div>
+              <span class="block text-[#FCD758] text-[10px] font-black uppercase tracking-[0.1em] mb-4">
+                PORT TERMINALS
+              </span>
+              <ul class="space-y-2.5 text-xs text-slate-300 font-open-sans uppercase tracking-wider font-semibold">
+                <li><span class="text-white">JNPT / NHAVA SHEVA</span></li>
+                <li><span class="text-white">MUNDRA PORT (INMUN1)</span></li>
+                <li><span class="text-white">CHENNAI CONTAINER PORT</span></li>
+                <li><span class="text-white">COCHIN DEEPWATER</span></li>
+                <li><span class="text-white">TUTICORIN PORT TRUST</span></li>
+                <li><span class="text-white">MUMBAI PORT AIR CARGO</span></li>
+              </ul>
+            </div>
+
+            <!-- Col 3 -->
+            <div>
+              <span class="block text-[#FCD758] text-[10px] font-black uppercase tracking-[0.1em] mb-4">
+                LEGAL & COMPLIANCE
+              </span>
+              <ul class="space-y-2.5 text-xs text-slate-300 font-open-sans uppercase tracking-wider font-semibold">
+                <li><span class="text-white">DGFT REGISTRATION</span></li>
+                <li><span class="text-white">APEDA / SPICES BOARD</span></li>
+                <li><span class="text-white">FSSAI EXPORT PERMIT</span></li>
+                <li><span class="text-white">CHAMBER OF COMMERCE</span></li>
+                <li><span class="text-white">SGS LAB VERIFIED</span></li>
+                <li><span class="text-white">ISPM-15 PHYTOSANITARY</span></li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Bottom Legal Bar: 1px border-top and 8px text -->
+        <div class="border-t border-[#444444] pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[8px] text-slate-400 font-open-sans uppercase tracking-widest">
+          <div>
+            © 2026 ALPHAA GLOBAL TRADERS PVT. LTD. ALL RIGHTS RESERVED. REGISTERED GOVT. OF INDIA RECOGNIZED EXPORT HOUSE.
+          </div>
+          <div class="flex items-center gap-6">
+            <span>IEC NO: 0308029141</span>
+            <span>GSTIN: 27AABCA1234F1Z5</span>
+            <span>RCMC: WR/MUM/2026</span>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- ====================================================================
+         CART SLIDEOUT DRAWER
+         ==================================================================== -->
+    <div id="cart-backdrop" class="hidden fixed inset-0 bg-black/60 z-50 transition-opacity"></div>
+    <aside
+      id="cart-drawer"
+      class="fixed top-0 right-0 h-full w-full max-w-md bg-[#F5F1E3] border-l-4 border-[#2C2C2C] z-50 transform translate-x-full transition-transform duration-300 flex flex-col shadow-editorial-20"
+      aria-label="Order Manifest Drawer"
+    >
+      <!-- Drawer Header -->
+      <div class="bg-[#BC2C2C] text-white p-4 border-b-2 border-[#2C2C2C] flex items-center justify-between">
+        <div>
+          <span class="text-[9px] font-black uppercase tracking-widest text-[#FCD758]">TRADE ALLOCATION</span>
+          <h3 class="font-montserrat font-black text-lg uppercase tracking-tight leading-none text-white">ORDER MANIFEST</h3>
+        </div>
+        <button
+          type="button"
+          id="cart-close-btn"
+          class="w-8 h-8 border-2 border-[#2C2C2C] bg-white text-[#2C2C2C] flex items-center justify-center font-black hover:bg-[#FCD758] transition-colors cursor-pointer"
+          aria-label="Close cart"
+        >
+          ✕
+        </button>
+      </div>
+
+      <!-- Checkout notice banner (strictly avoids window.alert) -->
+      <div id="checkout-notice" class="hidden bg-[#FCD758] border-b-2 border-[#2C2C2C] p-4 text-[#2C2C2C]">
+        <p class="font-montserrat font-black text-xs uppercase mb-1">PROFORMA INVOICE TRANSMITTED</p>
+        <p class="font-open-sans text-[10px] uppercase tracking-wider text-slate-800">YOUR MANIFEST HAS BEEN LOGGED TO THE TRADE DESK. PROFORMA DOCUMENT DISPATCHED.</p>
+      </div>
+
+      <!-- Cart Item List -->
+      <div id="cart-items-list" class="flex-1 overflow-y-auto p-4">
+        <!-- Rendered by main.ts -->
+      </div>
+
+      <!-- Drawer Footer -->
+      <div class="bg-white border-t-2 border-[#2C2C2C] p-4 space-y-3">
+        <div class="flex items-center justify-between">
+          <span class="utility-label text-slate-500">ESTIMATED COMMODITY TOTAL</span>
+          <span id="cart-subtotal" class="font-mono font-black text-xl text-[#BC2C2C]">$6,820.00</span>
+        </div>
+
+        <button
+          type="button"
+          id="checkout-btn"
+          class="w-full py-4 bg-[#2C2C2C] text-white font-montserrat font-black text-xs uppercase tracking-widest hover:bg-[#FCD758] hover:text-[#2C2C2C] border-2 border-[#2C2C2C] transition-colors cursor-pointer shadow-editorial-4"
+        >
+          GENERATE PROFORMA INVOICE
+        </button>
+      </div>
+    </aside>
+
+    <!-- ====================================================================
+         SEARCH MODAL
+         ==================================================================== -->
+    <div id="search-modal" class="hidden fixed inset-0 bg-black/60 z-50 flex items-start justify-center p-4 sm:p-8 pt-20">
+      <div class="bg-[#F5F1E3] border-4 border-[#2C2C2C] w-full max-w-2xl shadow-editorial-20 overflow-hidden">
+        <div class="bg-[#BC2C2C] text-white p-4 border-b-2 border-[#2C2C2C] flex items-center justify-between">
+          <span class="font-montserrat font-black text-sm uppercase tracking-wider">SEARCH EXPORT ARCHIVE</span>
+          <button type="button" id="search-close-btn" class="w-8 h-8 border-2 border-[#2C2C2C] bg-white text-[#2C2C2C] font-black hover:bg-[#FCD758] flex items-center justify-center cursor-pointer">✕</button>
+        </div>
+        <div class="p-4 border-b-2 border-[#2C2C2C] bg-white">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="TYPE COMMODITY, SPECIFICATION OR BRAND (E.G. SPICES, DERBY, COTTON)..."
+            class="w-full text-sm font-mono font-bold uppercase p-3 border-2 border-[#2C2C2C] focus:outline-hidden focus:bg-[#FCD758]/20"
+          />
+        </div>
+        <div id="search-results" class="max-h-[60vh] overflow-y-auto p-4 space-y-3">
+          <!-- Populated by main.ts -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Application Script Entry Point -->
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
